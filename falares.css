@@ -1,0 +1,58 @@
+
+.imagePreview{
+    width: 440px;
+}
+
+.menuContainer{
+
+    height: 100%;
+    z-index: 2;
+    justify-content : flex-end;
+    display: flex;
+    overflow: hidden;
+
+}
+
+.previewList{
+
+    width: 470px;
+    height: 100%;
+    overflow: scroll;
+    /* scroll-margin-top: 50px; */
+
+}
+
+
+.colapseContainer{
+
+    width: 200px;
+    height: 100%;
+
+}
+
+.indicator{
+
+    width: 30px;
+    background: #3D3D3D;
+    margin-right: 10px;
+
+}
+
+.previewComtanier{
+    display: flex;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+/* -------------------------------- */
+/* -------------------------------- */
+/* -------------------------------- */
+.videosContainer{
+
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+}
+
