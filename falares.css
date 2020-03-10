@@ -1,4 +1,13 @@
 
+html {
+    overflow: scroll;
+    overflow-x: hidden;
+}
+::-webkit-scrollbar {
+    width: 0px;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
+
 .imagePreview{
     width: 440px;
 }
@@ -6,10 +15,31 @@
 .menuContainer{
 
     height: 100%;
-    z-index: 2;
+    z-index: 1;
+    position: absolute;    
     justify-content : flex-end;
     display: flex;
     overflow: hidden;
+    right: 0px;
+    padding-right: 200px;
+    display: block;
+
+    transform: translateX(0px);
+    
+
+
+}
+
+.menuContainer.displayNone{
+
+        display : none;
+
+}
+
+.previewList.off{
+    transform: translateX(700px);
+
+    
 
 }
 
@@ -18,7 +48,10 @@
     width: 470px;
     height: 100%;
     overflow: scroll;
-    /* scroll-margin-top: 50px; */
+    transform: translateX(0px);
+    transition: transform 500ms;
+    overflow-y: scroll;
+    overflow-x: hidden;
 
 }
 
@@ -26,22 +59,50 @@
 .colapseContainer{
 
     width: 200px;
-    height: 100%;
+    height: 200px;
+    right: 0px;
+    position: absolute;
+    z-index: 2;
 
 }
 
-.indicator{
+.indicatorBg{
 
-    width: 30px;
+    width: 12px;
     background: #3D3D3D;
     margin-right: 10px;
+    transition: width 500s;
 
+
+}
+
+.indicator.on{
+
+    transform: scaleY(1);
+    height: 100%;
+    background: white;
+    transition: transform 300ms;
+
+}
+.indicator{
+
+    transform: scaleY(0);
+    height: 100%;
+    background: white;
+    transition: transform 300ms;
+    transform-origin: top center;
+
+}
+
+.indicator.bottom{
+    transform-origin: bottom center;
 }
 
 .previewComtanier{
     display: flex;
     width: 100%;
     margin-bottom: 20px;
+    position : relative;
 }
 
 /* -------------------------------- */
@@ -56,3 +117,44 @@
 
 }
 
+.previewTitle{
+
+    position: absolute;
+    color: white;
+    font-size: 40px;
+    width : 350px;
+    margin-left: 55px;
+    bottom : 25px;
+
+}
+
+.overlayTitle{
+
+    position: absolute;
+    font-size: 70px;
+    color: #E4E4E4;
+    width: 100%;
+}
+
+.overlay{
+
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    opacity: 1;
+    display: block;
+    transition: opacity 400ms;
+
+}
+
+.overlay.off{
+    opacity: 0;
+}
+
+
+.overlay.displayNone{
+
+    display: none !important;
+}

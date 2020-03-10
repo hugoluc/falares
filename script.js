@@ -4,7 +4,7 @@ var options = {
     videos  : [      
         {
             videoUrl : "videos/0/video.mp4",
-            title : "A língua e as variações geográficas",
+            title : "1111111111111111111111111",
             subtitles : [
                 { 
                     type : "libras",
@@ -34,7 +34,7 @@ var options = {
         },
         {
             videoUrl : "videos/0/video.mp4",
-            title : "A língua e as variações geográficas",
+            title : "2222222222222222222222222222222222222",
             subtitles : [
                 { 
                     type : "libras",
@@ -64,7 +64,7 @@ var options = {
         },        
         {
             videoUrl : "videos/0/video.mp4",
-            title : "A língua e as variações geográficas",
+            title : "333333333333333333333333333333333333333333333333",
             subtitles : [
                 { 
                     type : "libras",
@@ -164,9 +164,13 @@ function falares(_data){
     this.videos = []
     this.videosContaners = []
     this.indicators = []
-    
-    this.createDOMElements()
+    this.overlays = []
+    this.selectedVideoId = 0;
+    this.moved = false
+    this.menuOpened = true
 
+    this.createDOMElements()
+    this.changeVideo(0)
 }
 
 //===============================================================
@@ -191,10 +195,18 @@ falares.prototype.createDOMElements = function(){
 
     this.colapseContainer = document.createElement('div')
     this.colapseContainer.className = "colapseContainer"
-    this.menuContainer.appendChild(this.colapseContainer)
+    document.body.appendChild(this.colapseContainer)
     
+    this.colapseContainer.addEventListener("touchend", _event =>{
 
-    //Overlay
+        if(this.menuOpened){
+            this.closeMenu()
+        }else{
+            this.openMenu()
+        }
+        this.menuOpened = !this.menuOpened
+    })
+
     for (let i = 0; i < this.data.videos.length; i++) {
     
         //Create Videos
@@ -204,9 +216,22 @@ falares.prototype.createDOMElements = function(){
         this.videosContaners.push(videosContaner)
         
         //overlay
-        this.overlay = document.createElement('div')
-        this.overlay.className = "overlay"
-        videosContaner.appendChild(this.overlay)
+        var overlay = document.createElement('div')
+        overlay.style.display = "none"
+        overlay.style.zIndex = "1"
+        overlay.className = "overlay"
+        overlay.addEventListener('webkitTransitionEnd', (e) => {    
+            this.toggleOverlayVisibility(e.target)
+        })
+
+
+        this.overlays.push(overlay)
+        videosContaner.appendChild(overlay)
+
+        var title = document.createElement('div')
+        title.className = "overlayTitle"
+        title.innerHTML = this.data.videos[i].title
+        overlay.appendChild(title)
 
         //-----------------------------------------
         //-----------------------------------------
@@ -219,40 +244,39 @@ falares.prototype.createDOMElements = function(){
         if(i == 0 ) container.style.marginTop = scrollPadding + "px"
         if(i == this.data.videos.length -1 ) container.style.marginBottom = scrollPadding + "px"
         this.previewList.appendChild(container)
-        container.addEventListener("touchstart", ()=>{
-            console.log(i);            
+        container.addEventListener("touchend", _event =>{    
+            if(i != this.selectedVideoId){
+                this.changeVideo(i);
+            }
+            this.moved = false            
         })
+        container.addEventListener("touchmove", ()=>{
+            this.moved = true
+        })
+        
 
         var indicator = document.createElement('div')
-        indicator.className = "indicator"
+        indicator.className = "indicatorBg"
         this.indicators.push(indicator)
         container.appendChild(indicator)
 
+        var indicatorOff = document.createElement('div')
+        indicatorOff.className = "indicator"
+        indicator.appendChild(indicatorOff)
+
+        //preview Title
+        var previewTitle = document.createElement('div')
+        previewTitle.className = "previewTitle"
+        previewTitle.innerHTML = this.data.videos[i].title
+        container.appendChild(previewTitle)
+
         this.createVideos(i,videosContaner,container)
-
-
-        
+             
     }
 
 
-    //fullScreen_btn
-
-    // 
-    // IndicatorsBg
-
-    // SelectedIndicator
-
-    // VideopreviewList
-    // VideoPreviews
-        //Titles
-        //Images
-
-    //colapseContainer
-    //ColapseIcon
-
 
 }
-
 
 falares.prototype.createVideos = function(_i, _videosContaner, _imageContainer){
         
@@ -269,7 +293,6 @@ falares.prototype.createVideos = function(_i, _videosContaner, _imageContainer){
     player.onloaded = () => { this.getVideoImage(player,_imageContainer,1) }
     
 }
-
 
 falares.prototype.getVideoImage = function(_player,_imageContainer,scale){
 
@@ -288,11 +311,16 @@ falares.prototype.getVideoImage = function(_player,_imageContainer,scale){
         if(pixels[0]==0 && pixels[0]==0){
             setTimeout(() => { getPixels()} , 1000)
         }else{
+            
             const image = new Image()
             image.src = canvas.toDataURL()
             image.className = "imagePreview"
             image.id = _player.id
             _imageContainer.appendChild(image)
+            
+            if(_player.id != 0 ) _player.toggleVisibility()
+            _player.onloaded = () =>{}
+
         }
 
     }
@@ -306,22 +334,42 @@ falares.prototype.getVideoImage = function(_player,_imageContainer,scale){
 
 falares.prototype.openMenu = function(){
 
-    // Change icon directios
-    // Transform VideoPreviewContainer
-    // Transform IndicatorContainer
+    this.videos[this.selectedVideoId].controls.closeControls()
+    this.menuContainer.classList.toggle("displayNone") 
+
+    this.overlays[this.selectedVideoId].classList.toggle("displayNone")    
+    setTimeout(() => { 
+        
+        this.previewList.classList.remove("off")
+        this.videoContainer.style.zIndex = 1
+        this.overlays[this.selectedVideoId].classList.remove("off") 
+
+    },1)
+
 
 }
 
 falares.prototype.closeMenu = function(){
 
-    // change z-index of video to positive
+    setTimeout(() => { 
+        this.previewList.classList.add("off")  
+        this.videoContainer.style.zIndex = 1
+        this.overlays[this.selectedVideoId].classList.add("off")
+    },1)
 
-    //close submenu if open
-    //close menu if open
+}
 
-    // Change icon directios
-    // Transform VideoPreviewContainer
-    // Transform IndicatorContainer
+
+falares.prototype.toggleOverlayVisibility = function(_element){
+
+    console.log("------------------");
+    console.log(this.menuOpened);
+    
+
+    if(!this.menuOpened){
+       _element.classList.toggle("displayNone")  
+       this.menuContainer.classList.toggle("displayNone")  
+    }
 
 }
 
@@ -341,27 +389,42 @@ falares.prototype.exitFullScreen = function(){
 
 }
 
-falares.prototype.changeVideo = function(){
+falares.prototype.changeVideo = function(_index){
 
+    if( this.moved) return
+
+    console.log("index: " + _index, "selected: " + this.selectedVideoId);
+    this.videos[this.selectedVideoId].controls.pause()
+    this.videos[this.selectedVideoId].controls.closeControls()
+    
+    for (let i = 0; i < this.indicators.length; i++) {
+        if( i != _index ){
+            this.indicators[i].children[0].className = "indicator";
+        }
+    }
+    
+    if (_index > this.selectedVideoId){
+        this.indicators[this.selectedVideoId].children[0].classList.add("bottom")
+        this.indicators[_index].children[0].classList.remove("bottom")
+    }else{
+        this.indicators[this.selectedVideoId].children[0].classList.remove("bottom")
+        this.indicators[_index].children[0].classList.add("bottom")
+    }
+    
+    this.indicators[_index].children[0].classList.add("on")    
+    
+    this.videos[this.selectedVideoId].toggleVisibility()
+    this.overlays[this.selectedVideoId].style.display = "none"
+    
+    this.videos[_index].toggleVisibility()
+    this.overlays[_index].style.display = "block"
+    this.selectedVideoId = _index
+
+
+    
     //set position of scroll
-    //animate indicator
-    //Change video
-        // last = display none
-        // current= display true
-        //play video
 
 }
-
-falares.prototype.changeVideo = function(){
-
-    //set position of scroll
-    //animate indicator
-    //Change video
-        // last = display none
-        // current= display true
-
-}
-
 
 //===============================================================
 //===============================================================
@@ -373,3 +436,7 @@ for ( var i = 0; i < 1; i++){
 
 }
 
+window.addEventListener("touchstart", (en) =>{
+    console.log(en.target);
+    
+})

@@ -10,26 +10,18 @@ function simplePlayer(_videoUrl,_subs,_title,_parent) {
     this.container = document.createElement('div')
     this.container.className = "playerVideo"
     this.loaded = false
-    this.onloaded = function(){ 
-        console.log("video loaded")
-    }
+    this.onloaded = function(){  console.log("video loaded") }
     _parent.appendChild(this.container)
-    // this.downloadVideo(_videoUrl)
 
     this.videoContainer = document.createElement('div')
     this.videoContainer.className = "videoContainer"
-    this.videoContainer.addEventListener('touchstart', e => {
-        console.log("00000");
-        this.controls.togglePlay()
-    })
+    this.videoContainer.addEventListener('touchstart', e => { this.controls.togglePlay() })
     this.container.appendChild(this.videoContainer)
 
     this.video = document.createElement('video')
     this.video.isLoaded = false
     this.video.src = _videoUrl
     this.videoContainer.appendChild(this.video)
-
-
     this.video.addEventListener('loadedmetadata', () => { 
 
         this.load()
@@ -37,13 +29,10 @@ function simplePlayer(_videoUrl,_subs,_title,_parent) {
             this.loaded = true
             this.video.load()
         }else{
-
             this.video.isReady = true
-           
         }
 
     });
-
     this.video.addEventListener('canplaythrough', () => { 
         this.onloaded()
     });
@@ -69,6 +58,7 @@ simplePlayer.prototype.load = function(){
 
 
 simplePlayer.prototype.toggleVisibility = function(){
+    
 
     if(this.isVisible){
     
@@ -78,7 +68,7 @@ simplePlayer.prototype.toggleVisibility = function(){
     }else{
 
         this.isVisible = true
-        this.container.style.display = "blocl"
+        this.container.style.display = "block"
 
     }
 
@@ -116,6 +106,8 @@ function timeLineControl(_video, _parent, _controlContainer, _container, _subs, 
     this.timouts = []
     this.waitTime = 3000
     this.closeControlTimeout()
+    this.closeControls()
+    this.pause()
 
 }
 
@@ -128,7 +120,7 @@ timeLineControl.prototype.createDOMelements = function (_parent,_controlContaine
     this.title = document.createElement('div')
     this.title.innerHTML = this.titleText
     this.title.className = "title"
-    _container.appendChild(this.title)
+    // _container.appendChild(this.title)
 
     this.playBtn = document.createElement('div')
     this.playBtn.className = "play-pause"
@@ -152,9 +144,6 @@ timeLineControl.prototype.createDOMelements = function (_parent,_controlContaine
     })
     
     this.timeLine.addEventListener('touchstart', e => {
-
-        console.log("00000");
-        
 
         if (!this.video.isReady) return;
         
@@ -213,7 +202,7 @@ timeLineControl.prototype.play = function (_time) {
     this.subtilteControl.play()
     this.video.play()
     this.isPlaying = true
-    this.playBtn.classList.toggle("on")
+    this.playBtn.classList.add("on")
 
 }
 
@@ -222,7 +211,7 @@ timeLineControl.prototype.pause = function (_time) {
     this.subtilteControl.pause()
     this.video.pause()
     this.isPlaying = false
-    this.playBtn.classList.toggle("on")
+    this.playBtn.classList.remove("on")
 
 }
 
@@ -253,16 +242,16 @@ timeLineControl.prototype.togglePlay = function (_time) {
 
 timeLineControl.prototype.closeControls = function(){    
     
-    this.btnsContainer.classList.toggle("closed")
-    this.bg.classList.toggle("closed")
+    this.btnsContainer.classList.add("closed")
+    this.bg.classList.add("closed")
     setTimeout(()=>{
-        this.controlContainer.classList.toggle("closed")    
+        this.controlContainer.classList.add("closed")    
     }, 300)
     this.menuOpen = false
     this.ellapsedTime = 0
 
     this.subtilteControl.subtitlesContainer.style.transform = "translate(0px,0px)"
-    this.title.classList.toggle("off")  
+    this.title.classList.add("off")  
 
 }
 
