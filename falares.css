@@ -13,7 +13,6 @@ html {
 }
 
 .menuContainer{
-
     height: 100%;
     z-index: 1;
     position: absolute;    
@@ -21,30 +20,20 @@ html {
     display: flex;
     overflow: hidden;
     right: 0px;
-    padding-right: 200px;
+    padding-right: 120px;
     display: block;
-
     transform: translateX(0px);
-    
-
-
 }
 
 .menuContainer.displayNone{
-
-        display : none;
-
+    display : none;
 }
 
 .previewList.off{
     transform: translateX(700px);
-
-    
-
 }
 
 .previewList{
-
     width: 470px;
     height: 100%;
     overflow: scroll;
@@ -57,14 +46,56 @@ html {
 
 
 .colapseContainer{
-
-    width: 200px;
-    height: 200px;
+    width: 120px;
+    height: 120px;
     right: 0px;
     position: absolute;
     z-index: 2;
 
+    transition: transform 300ms;
+    top: 15px;
+    transform: rotate(180deg);
 }
+
+.colapseContainer.open{
+    transform: rotate(0deg);
+
+}
+
+.colapseContainer .left{
+    border-top: 7px solid;
+    border-right: 7px solid white;
+    height: 22px;
+    width: 22px;
+    position: absolute;
+    border-radius: 3px;
+    border-color: white;
+    transform: rotate(45deg);
+
+    top: 46px;
+    left: 30px;
+
+    transition: transform 400ms;
+
+}
+
+.colapseContainer .right{
+    border-top: 7px solid;
+    border-right: 7px solid white;
+    height: 22px;
+    width: 22px;
+    position: absolute;
+    border-radius: 3px;
+    border-color: white;
+    transform: rotate(45deg);
+
+    top: 46px;
+    left: 49px;
+
+    transition: transform 400ms;
+
+}
+
 
 .indicatorBg{
 
@@ -72,7 +103,6 @@ html {
     background: #3D3D3D;
     margin-right: 10px;
     transition: width 500s;
-
 
 }
 
@@ -110,11 +140,10 @@ html {
 /* -------------------------------- */
 .videosContainer{
 
-    z-index: -1;
+    z-index: 1;
     position: absolute;
     width: 100%;
     height: 100%;
-
 }
 
 .previewTitle{
@@ -125,16 +154,9 @@ html {
     width : 350px;
     margin-left: 55px;
     bottom : 25px;
-
 }
 
-.overlayTitle{
 
-    position: absolute;
-    font-size: 70px;
-    color: #E4E4E4;
-    width: 100%;
-}
 
 .overlay{
 
@@ -142,7 +164,6 @@ html {
     z-index: 1;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
     opacity: 1;
     display: block;
     transition: opacity 400ms;
@@ -155,6 +176,76 @@ html {
 
 
 .overlay.displayNone{
-
     display: none !important;
+}
+
+.overlayTitle{
+
+    font-size: 70px;
+    color: #E4E4E4;
+    width: 1000px;
+    position: absolute;
+    top: 250px;
+    left: 90px;
+}
+
+.overlayBG{
+
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.7);
+
+}
+
+.overlayLine{
+
+    position: absolute;
+    width: 550px;
+    height: 10px;
+    background-color: white;
+    top: 530px;
+    left: 90px;
+
+}
+
+.overlayIcon{
+
+    width: 110px;
+    height: 110px;
+    background-color: white;
+    position: absolute;
+    top: 600px;
+    left : 90px
+
+}
+
+.overlayIcon .right{
+    border-top: 10px solid #1A1819;
+    width: 15px;
+    height: 15px;
+    border-right: 10px solid #1A1819;
+    position: absolute;
+    top: 15;
+    right: 15;
+}
+
+.overlayIcon .left{
+    border-bottom: 10px solid #1A1819;
+    border-left: 10px solid #1A1819;
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    bottom: 15;
+    left: 15;
+}
+
+.overlayfullScreen{
+
+    color: white;
+    position: absolute;
+    font-size: 40px;
+    top: 640px;
+    left : 240px
+
 }

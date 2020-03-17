@@ -4,7 +4,7 @@ var options = {
     videos  : [      
         {
             videoUrl : "videos/0/video.mp4",
-            title : "1111111111111111111111111",
+            title : "Cras varius bibendum risus quis molestie",
             subtitles : [
                 { 
                     type : "libras",
@@ -34,7 +34,7 @@ var options = {
         },
         {
             videoUrl : "videos/0/video.mp4",
-            title : "2222222222222222222222222222222222222",
+            title : "Maecenas accumsan, metus ac laoreet sapien odio a erat",
             subtitles : [
                 { 
                     type : "libras",
@@ -64,7 +64,7 @@ var options = {
         },        
         {
             videoUrl : "videos/0/video.mp4",
-            title : "333333333333333333333333333333333333333333333333",
+            title : "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
             subtitles : [
                 { 
                     type : "libras",
@@ -194,18 +194,20 @@ falares.prototype.createDOMElements = function(){
     this.menuContainer.appendChild(this.previewList)
 
     this.colapseContainer = document.createElement('div')
-    this.colapseContainer.className = "colapseContainer"
+    this.colapseContainer.className = "colapseContainer open"
     document.body.appendChild(this.colapseContainer)
-    
     this.colapseContainer.addEventListener("touchend", _event =>{
-
-        if(this.menuOpened){
-            this.closeMenu()
-        }else{
-            this.openMenu()
-        }
-        this.menuOpened = !this.menuOpened
+        this.toggleMenu()
     })
+
+    var left = document.createElement('div')
+    left.className = "left"
+    this.colapseContainer.appendChild(left)
+
+    var right = document.createElement('div')
+    right.className = "right"
+    this.colapseContainer.appendChild(right)
+
 
     for (let i = 0; i < this.data.videos.length; i++) {
     
@@ -228,10 +230,42 @@ falares.prototype.createDOMElements = function(){
         this.overlays.push(overlay)
         videosContaner.appendChild(overlay)
 
+
+        var backGround = document.createElement('div')
+        backGround.className = "overlayBG"
+        overlay.appendChild(backGround)
+
         var title = document.createElement('div')
         title.className = "overlayTitle"
         title.innerHTML = this.data.videos[i].title
         overlay.appendChild(title)
+        
+        var line = document.createElement('div')
+        line.className = "overlayLine"
+        overlay.appendChild(line)
+
+        var fullScreen = document.createElement('div')
+        fullScreen.className = "overlayfullScreen"
+        fullScreen.innerHTML = "Full Screen"
+        overlay.appendChild(fullScreen)
+
+        var icon = document.createElement('div')
+        icon.className = "overlayIcon"
+        overlay.appendChild(icon)
+        icon.addEventListener("touchend", _event =>{
+            this.toggleMenu()
+        })
+
+        var left = document.createElement('div')
+        left.className = "left"
+        icon.appendChild(left)
+    
+        var right = document.createElement('div')
+        right.className = "right"
+        icon.appendChild(right)
+
+
+
 
         //-----------------------------------------
         //-----------------------------------------
@@ -253,7 +287,6 @@ falares.prototype.createDOMElements = function(){
         container.addEventListener("touchmove", ()=>{
             this.moved = true
         })
-        
 
         var indicator = document.createElement('div')
         indicator.className = "indicatorBg"
@@ -332,11 +365,21 @@ falares.prototype.getVideoImage = function(_player,_imageContainer,scale){
 //===============================================================
 //===============================================================
 
+
+falares.prototype.toggleMenu = function(){
+
+    if(this.menuOpened){  this.closeMenu() }
+    else{  this.openMenu() }
+    this.menuOpened = !this.menuOpened
+
+
+}
+
 falares.prototype.openMenu = function(){
 
     this.videos[this.selectedVideoId].controls.closeControls()
     this.menuContainer.classList.toggle("displayNone") 
-
+    this.colapseContainer.classList.add("open")
     this.overlays[this.selectedVideoId].classList.toggle("displayNone")    
     setTimeout(() => { 
         
@@ -352,6 +395,7 @@ falares.prototype.openMenu = function(){
 falares.prototype.closeMenu = function(){
 
     setTimeout(() => { 
+        this.colapseContainer.classList.remove("open")
         this.previewList.classList.add("off")  
         this.videoContainer.style.zIndex = 1
         this.overlays[this.selectedVideoId].classList.add("off")
