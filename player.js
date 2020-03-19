@@ -6,6 +6,7 @@
 function simplePlayer(_videoUrl,_subs,_title,_parent) { 
 
     this.isVisible = true
+    this.videoEnded = function(){}
 
     this.container = document.createElement('div')
     this.container.className = "playerVideo"
@@ -33,10 +34,9 @@ function simplePlayer(_videoUrl,_subs,_title,_parent) {
         }
 
     });
-    this.video.addEventListener('canplaythrough', () => { 
-        this.onloaded()
-    });
-    
+    this.video.addEventListener('canplaythrough', () => {  this.onloaded() });
+    this.video.addEventListener('ended', () => { this.videoEnded() });
+
     //background
     this.controlContainer = document.createElement('div')
     this.controlContainer.className = "controlContainer"
@@ -55,7 +55,6 @@ function simplePlayer(_videoUrl,_subs,_title,_parent) {
 simplePlayer.prototype.load = function(){
     this.controls.subtilteControl.setup()
 }
-
 
 simplePlayer.prototype.toggleVisibility = function(){
     
@@ -83,7 +82,7 @@ simplePlayer.prototype.toggleVisibility = function(){
 function timeLineControl(_video, _parent, _controlContainer, _container, _subs, _title){
 
     _video.addEventListener('timeupdate', (_event)=>{ 
-        if (_event.target.currentTime >= this.video.duration) console.log(" finished ")
+        if (_event.target.currentTime >= this.video.duration) {}
         this.timeUpdated(_event.target.currentTime )
     })
 

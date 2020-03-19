@@ -281,6 +281,7 @@ falares.prototype.createDOMElements = function(){
         container.addEventListener("touchend", _event =>{    
             if(i != this.selectedVideoId){
                 this.changeVideo(i);
+                this.videos[this.selectedVideoId].controls.play()
             }
             this.moved = false            
         })
@@ -319,7 +320,12 @@ falares.prototype.createVideos = function(_i, _videosContaner, _imageContainer){
         this.data.videos[_i].title,    
         _videosContaner
     );
+    
+    player.videoEnded = ()=> {
 
+            this.videoEnded(_i)
+
+    } 
     player.id = _i
     this.videos.push(player)
 
@@ -362,6 +368,14 @@ falares.prototype.getVideoImage = function(_player,_imageContainer,scale){
 
 }
 
+falares.prototype.videoEnded = function(_id){
+
+    this.changeVideo((_id + 1)%this.videos.length)
+    this.openMenu()
+    this.videos[this.selectedVideoId].controls.play()
+
+}
+
 //===============================================================
 //===============================================================
 
@@ -372,15 +386,14 @@ falares.prototype.toggleMenu = function(){
     else{  this.openMenu() }
     this.menuOpened = !this.menuOpened
 
-
 }
 
 falares.prototype.openMenu = function(){
 
     this.videos[this.selectedVideoId].controls.closeControls()
-    this.menuContainer.classList.toggle("displayNone") 
+    this.menuContainer.classList.remove("displayNone") 
     this.colapseContainer.classList.add("open")
-    this.overlays[this.selectedVideoId].classList.toggle("displayNone")    
+    this.overlays[this.selectedVideoId].classList.remove("displayNone")    
     setTimeout(() => { 
         
         this.previewList.classList.remove("off")
@@ -404,11 +417,7 @@ falares.prototype.closeMenu = function(){
 }
 
 
-falares.prototype.toggleOverlayVisibility = function(_element){
-
-    console.log("------------------");
-    console.log(this.menuOpened);
-    
+falares.prototype.toggleOverlayVisibility = function(_element){    
 
     if(!this.menuOpened){
        _element.classList.toggle("displayNone")  
@@ -418,35 +427,28 @@ falares.prototype.toggleOverlayVisibility = function(_element){
 }
 
 falares.prototype.enterFullScreen = function(){
-
     this.closeMenu()
-    //Hide overlay
-
 }
 
 falares.prototype.exitFullScreen = function(){
-
-
     this.openMenu()
-    //show overlay
-
-
 }
 
 falares.prototype.changeVideo = function(_index){
 
-    if( this.moved) return
+    //do nothing if mouse is moving
+    if(this.moved) return
 
-    console.log("index: " + _index, "selected: " + this.selectedVideoId);
+    //pause previous video and close its controls
     this.videos[this.selectedVideoId].controls.pause()
     this.videos[this.selectedVideoId].controls.closeControls()
     
+    //change indicator style to match selected video
     for (let i = 0; i < this.indicators.length; i++) {
         if( i != _index ){
             this.indicators[i].children[0].className = "indicator";
         }
     }
-    
     if (_index > this.selectedVideoId){
         this.indicators[this.selectedVideoId].children[0].classList.add("bottom")
         this.indicators[_index].children[0].classList.remove("bottom")
@@ -454,19 +456,17 @@ falares.prototype.changeVideo = function(_index){
         this.indicators[this.selectedVideoId].children[0].classList.remove("bottom")
         this.indicators[_index].children[0].classList.add("bottom")
     }
-    
     this.indicators[_index].children[0].classList.add("on")    
     
+    //hide deselected video
     this.videos[this.selectedVideoId].toggleVisibility()
     this.overlays[this.selectedVideoId].style.display = "none"
     
+    //Show selected video
     this.videos[_index].toggleVisibility()
     this.overlays[_index].style.display = "block"
     this.selectedVideoId = _index
 
-
-    
-    //set position of scroll
 
 }
 
@@ -475,9 +475,7 @@ falares.prototype.changeVideo = function(_index){
 
 
 for ( var i = 0; i < 1; i++){
-
     var v = new falares(options)
-
 }
 
 window.addEventListener("touchstart", (en) =>{
