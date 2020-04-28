@@ -4,7 +4,8 @@ var options = {
     videos  : [      
         {
             videoUrl : "videos/0/video.mp4",
-            title : "Cras varius bibendum risus quis molestie",
+            title : "Cras varius bibendum",
+            swearWords : false,
             subtitles : [
                 { 
                     type : "libras",
@@ -34,7 +35,8 @@ var options = {
         },
         {
             videoUrl : "videos/0/video.mp4",
-            title : "Maecenas accumsan, metus ac laoreet sapien odio a erat",
+            title : "Maecenas accumsan, metus ac",
+            swearWords : false,
             subtitles : [
                 { 
                     type : "libras",
@@ -64,7 +66,8 @@ var options = {
         },        
         {
             videoUrl : "videos/0/video.mp4",
-            title : "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+            title : "Lorem ipsum dolor sit amet",
+            swearWords : false,
             subtitles : [
                 { 
                     type : "libras",
@@ -95,6 +98,7 @@ var options = {
         {
             videoUrl : "videos/0/video.mp4",
             title : "A língua e as variações geográficas",
+            swearWords : true,
             subtitles : [
                 { 
                     type : "libras",
@@ -125,6 +129,7 @@ var options = {
         {
             videoUrl : "videos/0/video.mp4",
             title : "A língua e as variações geográficas",
+            swearWords : true,
             subtitles : [
                 { 
                     type : "libras",
@@ -235,6 +240,20 @@ falares.prototype.createDOMElements = function(){
         backGround.className = "overlayBG"
         overlay.appendChild(backGround)
 
+        if(this.data.videos[i].swearWords){
+
+            var warning = document.createElement('div')
+            warning.className = "warning"
+            warning.innerHTML = "Conteúdo com linguagem potencialmente ofensiva"
+            overlay.appendChild(warning)
+            
+            var warningImg = new Image()
+            warningImg.className = "warningImg"
+            warningImg.src = "warning.png"
+            overlay.appendChild(warningImg)
+            
+        }
+
         var title = document.createElement('div')
         title.className = "overlayTitle"
         title.innerHTML = this.data.videos[i].title
@@ -263,9 +282,6 @@ falares.prototype.createDOMElements = function(){
         var right = document.createElement('div')
         right.className = "right"
         icon.appendChild(right)
-
-
-
 
         //-----------------------------------------
         //-----------------------------------------
@@ -301,8 +317,12 @@ falares.prototype.createDOMElements = function(){
         //preview Title
         var previewTitle = document.createElement('div')
         previewTitle.className = "previewTitle"
-        previewTitle.innerHTML = this.data.videos[i].title
+        previewTitle.innerHTML = "<br>" + this.data.videos[i].title
         container.appendChild(previewTitle)
+
+        if(this.data.videos[i].swearWords){
+            previewTitle.className = "previewSwearWords previewTitle"
+        }
 
         this.createVideos(i,videosContaner,container)
              
@@ -327,6 +347,7 @@ falares.prototype.createVideos = function(_i, _videosContaner, _imageContainer){
 
     } 
     player.id = _i
+    player.swearWords = this.data.videos[_i].swearWords
     this.videos.push(player)
 
     player.onloaded = () => { this.getVideoImage(player,_imageContainer,1) }
@@ -368,9 +389,18 @@ falares.prototype.getVideoImage = function(_player,_imageContainer,scale){
 
 }
 
+
 falares.prototype.videoEnded = function(_id){
 
-    this.changeVideo((_id + 1)%this.videos.length)
+    var increment = 1
+
+    while(this.videos[(_id + increment)%this.videos.length].swearWords == true){
+        increment++
+        console.log(increment);
+        
+    }
+
+    this.changeVideo((_id + increment)%this.videos.length)
     this.openMenu()
     this.videos[this.selectedVideoId].controls.play()
 
@@ -466,7 +496,6 @@ falares.prototype.changeVideo = function(_index){
     this.videos[_index].toggleVisibility()
     this.overlays[_index].style.display = "block"
     this.selectedVideoId = _index
-
 
 }
 

@@ -1,7 +1,18 @@
 
+@font-face {
+    font-family: "Sohne";
+    src: url("Sohne/Sohne-Mager.otf")
+}
+@font-face {
+    font-family: "Sohne bold";
+    src: url("Sohne/Sohne-Halbfett.otf")
+}
+
 html {
+
     overflow: scroll;
     overflow-x: hidden;
+    font-family: Sohne;
 }
 ::-webkit-scrollbar {
     width: 0px;  /* Remove scrollbar space */
@@ -151,9 +162,19 @@ html {
     position: absolute;
     color: white;
     font-size: 40px;
-    width : 350px;
+    width : 400px;
     margin-left: 55px;
     bottom : 25px;
+}
+
+.previewSwearWords::before{
+    background-image: url(warning.png);
+    display: inline-block;
+    width: 45px;
+    height: 55px;
+    content: "";
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 
 
@@ -247,5 +268,31 @@ html {
     font-size: 40px;
     top: 640px;
     left : 240px
+
+}
+
+.warningImg{
+
+    position: absolute;
+    left: 90px;
+    top: 180px;
+    height: 54px;
+}
+
+.warning{
+
+    position: absolute;
+    font-size: 25px;
+    left: 170px;
+    top: 172;
+    color: #E4E4E4;
+    width: 400px;
+    font-family: Sohne bold;
+
+}
+
+.previewWarning{
+
+    width: 20px;
 
 }
