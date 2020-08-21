@@ -3,8 +3,8 @@ var options = {
 
     videos  : [      
         {
-            videoUrl : "videos/0/video.mp4",
-            title : "Cras varius bibendum",
+            videoUrl : "videos/0/certo ou errado_1.mp4",
+            title : "certo ou errado 1",
             swearWords : false,
             subtitles : [
                 { 
@@ -34,8 +34,8 @@ var options = {
             ]
         },
         {
-            videoUrl : "videos/0/video.mp4",
-            title : "Maecenas accumsan, metus ac",
+            videoUrl : "videos/1/certo ou errado_2.mp4",
+            title : "certo ou errado 2",
             swearWords : false,
             subtitles : [
                 { 
@@ -65,8 +65,39 @@ var options = {
             ]
         },        
         {
-            videoUrl : "videos/0/video.mp4",
-            title : "Lorem ipsum dolor sit amet",
+            videoUrl : "videos/2/língua e opressão_1.mp4",
+            title : "língua e opressão 1",
+            swearWords : false,
+            subtitles : [
+                { 
+                    type : "libras",
+                    url : 'libras.webm' ,
+                    title : "Libras",
+                    default : false
+                },
+                { 
+                    type : "text",
+                    url : 'videos/' + index + '/subs/es.vtt' ,
+                    title : "Ingles",
+                    default : false
+                },
+                { 
+                    type : "text",
+                    url : 'videos/' + index + '/subs/de.vtt' ,
+                    title : "Espanhol",
+                    default : false
+                },
+                { 
+                    type : "text",
+                    url : 'videos/' + index + '/subs/en.vtt' ,
+                    title : 'Portugês',
+                    default : true
+                }
+            ]
+        },  
+        {
+            videoUrl : "videos/3/língua e opressão_2.mp4",
+            title : "língua e opressão 2",
             swearWords : false,
             subtitles : [
                 { 
@@ -96,9 +127,9 @@ var options = {
             ]
         },        
         {
-            videoUrl : "videos/0/video.mp4",
-            title : "A língua e as variações geográficas",
-            swearWords : true,
+            videoUrl : "videos/4/a língua no tempo_1.mp4",
+            title : "A língua no tempo",
+            swearWords : false,
             subtitles : [
                 { 
                     type : "libras",
@@ -127,8 +158,70 @@ var options = {
             ]
         },        
         {
-            videoUrl : "videos/0/video.mp4",
-            title : "A língua e as variações geográficas",
+            videoUrl : "videos/5/acordos ortográficos.mp4",
+            title : "Acordos ortográficos",
+            swearWords : false,
+            subtitles : [
+                { 
+                    type : "libras",
+                    url : 'libras.webm' ,
+                    title : "Libras",
+                    default : false
+                },
+                { 
+                    type : "text",
+                    url : 'videos/' + index + '/subs/es.vtt' ,
+                    title : "Ingles",
+                    default : false
+                },
+                { 
+                    type : "text",
+                    url : 'videos/' + index + '/subs/de.vtt' ,
+                    title : "Espanhol",
+                    default : false
+                },
+                { 
+                    type : "text",
+                    url : 'videos/' + index + '/subs/en.vtt' ,
+                    title : 'Portugês',
+                    default : true
+                }
+            ]
+        },
+        {
+            videoUrl : "videos/6/as variações no falar_1.mp4",
+            title : "As variações no falar",
+            swearWords : false,
+            subtitles : [
+                { 
+                    type : "libras",
+                    url : 'libras.webm' ,
+                    title : "Libras",
+                    default : false
+                },
+                { 
+                    type : "text",
+                    url : 'videos/' + index + '/subs/es.vtt' ,
+                    title : "Ingles",
+                    default : false
+                },
+                { 
+                    type : "text",
+                    url : 'videos/' + index + '/subs/de.vtt' ,
+                    title : "Espanhol",
+                    default : false
+                },
+                { 
+                    type : "text",
+                    url : 'videos/' + index + '/subs/en.vtt' ,
+                    title : 'Portugês',
+                    default : true
+                }
+            ]
+        },
+        {
+            videoUrl : "videos/7/palavrões e dialetos_1.mp4",
+            title : "Palavrões e dialetos 1",
             swearWords : true,
             subtitles : [
                 { 
@@ -156,7 +249,69 @@ var options = {
                     default : true
                 }
             ]
-        }
+        },
+        {
+            videoUrl : "videos/8/palavrões e dialetos_2.mp4",
+            title : "Palavrões e dialetos 2",
+            swearWords : true,
+            subtitles : [
+                { 
+                    type : "libras",
+                    url : 'libras.webm' ,
+                    title : "Libras",
+                    default : false
+                },
+                { 
+                    type : "text",
+                    url : 'videos/' + index + '/subs/es.vtt' ,
+                    title : "Ingles",
+                    default : false
+                },
+                { 
+                    type : "text",
+                    url : 'videos/' + index + '/subs/de.vtt' ,
+                    title : "Espanhol",
+                    default : false
+                },
+                { 
+                    type : "text",
+                    url : 'videos/' + index + '/subs/en.vtt' ,
+                    title : 'Portugês',
+                    default : true
+                }
+            ]
+        },
+        {
+            videoUrl : "videos/9/palavrões e dialetos_3.mp4",
+            title : "Palavrões e dialetos 3",
+            swearWords : true,
+            subtitles : [
+                { 
+                    type : "libras",
+                    url : 'libras.webm' ,
+                    title : "Libras",
+                    default : false
+                },
+                { 
+                    type : "text",
+                    url : 'videos/' + index + '/subs/es.vtt' ,
+                    title : "Ingles",
+                    default : false
+                },
+                { 
+                    type : "text",
+                    url : 'videos/' + index + '/subs/de.vtt' ,
+                    title : "Espanhol",
+                    default : false
+                },
+                { 
+                    type : "text",
+                    url : 'videos/' + index + '/subs/en.vtt' ,
+                    title : 'Portugês',
+                    default : true
+                }
+            ]
+        },
     
     ]
 
@@ -215,14 +370,18 @@ falares.prototype.createDOMElements = function(){
 
 
     for (let i = 0; i < this.data.videos.length; i++) {
-    
+        
+
         //Create Videos
         var videosContaner = document.createElement('div')
         videosContaner.className = "video-" + i 
         this.videoContainer.appendChild(videosContaner)
         this.videosContaners.push(videosContaner)
         
-        //overlay
+        //-----------------------------------------
+        // overlays 
+        //-----------------------------------------
+        
         var overlay = document.createElement('div')
         overlay.style.display = "none"
         overlay.style.zIndex = "1"
@@ -230,50 +389,59 @@ falares.prototype.createDOMElements = function(){
         overlay.addEventListener('webkitTransitionEnd', (e) => {    
             this.toggleOverlayVisibility(e.target)
         })
-
-
         this.overlays.push(overlay)
         videosContaner.appendChild(overlay)
 
+        var overlayContent = document.createElement('div')
+        overlayContent.className = "overlayContent"
+        overlay.appendChild(overlayContent)
 
         var backGround = document.createElement('div')
         backGround.className = "overlayBG"
         overlay.appendChild(backGround)
-
+        
         if(this.data.videos[i].swearWords){
+
+            var warningContainer = document.createElement('div')
+            warningContainer.className = "warningContainer"
+            overlayContent.appendChild(warningContainer)
+
+            var warningImg = new Image()
+            warningImg.className = "warningImg"
+            warningImg.src = "warning.png"
+            warningContainer.appendChild(warningImg)
 
             var warning = document.createElement('div')
             warning.className = "warning"
             warning.innerHTML = "Conteúdo com linguagem potencialmente ofensiva"
-            overlay.appendChild(warning)
-            
-            var warningImg = new Image()
-            warningImg.className = "warningImg"
-            warningImg.src = "warning.png"
-            overlay.appendChild(warningImg)
+            warningContainer.appendChild(warning)
             
         }
 
         var title = document.createElement('div')
         title.className = "overlayTitle"
         title.innerHTML = this.data.videos[i].title
-        overlay.appendChild(title)
-        
+        overlayContent.appendChild(title)
+
         var line = document.createElement('div')
         line.className = "overlayLine"
-        overlay.appendChild(line)
+        overlayContent.appendChild(line)
 
-        var fullScreen = document.createElement('div')
-        fullScreen.className = "overlayfullScreen"
-        fullScreen.innerHTML = "Full Screen"
-        overlay.appendChild(fullScreen)
+        var overlayIconContainer =  document.createElement('div')
+        overlayIconContainer.className = "overlayIconContainer"
+        overlayContent.appendChild(overlayIconContainer)
 
         var icon = document.createElement('div')
         icon.className = "overlayIcon"
-        overlay.appendChild(icon)
+        overlayIconContainer.appendChild(icon)
         icon.addEventListener("touchend", _event =>{
             this.toggleMenu()
         })
+
+        var fullScreen = document.createElement('div')
+        fullScreen.className = "overlayfullScreen"
+        fullScreen.innerHTML = "Tela cheia"
+        overlayIconContainer.appendChild(fullScreen)
 
         var left = document.createElement('div')
         left.className = "left"
@@ -284,7 +452,7 @@ falares.prototype.createDOMElements = function(){
         icon.appendChild(right)
 
         //-----------------------------------------
-        //-----------------------------------------
+        // previews
         //-----------------------------------------
 
         var scrollPadding = 50
@@ -328,8 +496,6 @@ falares.prototype.createDOMElements = function(){
              
     }
 
-
-
 }
 
 falares.prototype.createVideos = function(_i, _videosContaner, _imageContainer){
@@ -341,16 +507,14 @@ falares.prototype.createVideos = function(_i, _videosContaner, _imageContainer){
         _videosContaner
     );
     
-    player.videoEnded = ()=> {
-
-            this.videoEnded(_i)
-
-    } 
+    player.videoEnded = ()=> { this.videoEnded(_i) } 
     player.id = _i
     player.swearWords = this.data.videos[_i].swearWords
     this.videos.push(player)
-
-    player.onloaded = () => { this.getVideoImage(player,_imageContainer,1) }
+        
+    player.onloaded = () => { 
+        this.getVideoImage(player,_imageContainer,1) 
+    }
     
 }
 
@@ -365,30 +529,40 @@ falares.prototype.getVideoImage = function(_player,_imageContainer,scale){
     
     var getPixels = (__player) => {
         
+        _player.video.currentTime = 30
         context.drawImage(_player.video, 0, 0, canvas.width, canvas.height);
         var pixels = context.getImageData(0,0,100,100).data
 
-        if(pixels[0]==0 && pixels[0]==0){
+        if(pixels[0]==0 && pixels[0]==0 && !_player.imageLoaded){
             setTimeout(() => { getPixels()} , 1000)
         }else{
-            
-            const image = new Image()
-            image.src = canvas.toDataURL()
-            image.className = "imagePreview"
-            image.id = _player.id
-            _imageContainer.appendChild(image)
-            
-            if(_player.id != 0 ) _player.toggleVisibility()
-            _player.onloaded = () =>{}
+
+            _player.imageLoaded = true
+
+            if(!_player.coverImage){
+                const image = new Image()
+                image.src = canvas.toDataURL()
+                image.className = "imagePreview"
+                image.id = _player.id
+                _imageContainer.appendChild(image)
+                _player.coverImage = image
+    
+                if(_player.id != 0 ) _player.toggleVisibility()
+                _player.onloaded = () =>{}
+                
+            }
+
+            _player.video.currentTime = 0
+            _player.controls.setCurrentTime(0)
 
         }
 
     }
-    
+
+    console.log(_player.id);    
     getPixels(_player)
 
 }
-
 
 falares.prototype.videoEnded = function(_id){
 
@@ -446,7 +620,6 @@ falares.prototype.closeMenu = function(){
 
 }
 
-
 falares.prototype.toggleOverlayVisibility = function(_element){    
 
     if(!this.menuOpened){
@@ -479,6 +652,7 @@ falares.prototype.changeVideo = function(_index){
             this.indicators[i].children[0].className = "indicator";
         }
     }
+
     if (_index > this.selectedVideoId){
         this.indicators[this.selectedVideoId].children[0].classList.add("bottom")
         this.indicators[_index].children[0].classList.remove("bottom")
@@ -499,6 +673,7 @@ falares.prototype.changeVideo = function(_index){
 
 }
 
+
 //===============================================================
 //===============================================================
 
@@ -508,6 +683,5 @@ for ( var i = 0; i < 1; i++){
 }
 
 window.addEventListener("touchstart", (en) =>{
-    console.log(en.target);
-    
+    // console.log(en.target);
 })

@@ -3,10 +3,18 @@
    font-family: "Sohne";
    src: url("Sohne/Sohne-Mager.otf")
 }
+
 @font-face {
-   font-family: "Sohne bold";
+   font-family: "SohneHalbfett";
    src: url("Sohne/Sohne-Halbfett.otf")
 }
+
+@font-face{
+   font-family: "SohneKraaftig";
+   src: url("Sohne/Söhne-Kräftig.otf")
+
+}
+
 
 *{
    font-family: Sohne;
@@ -49,12 +57,13 @@
  }
  
  .playerBg{
- 
+
     position: absolute;
     height: 540px;
     width: 100%;
     background-image: linear-gradient(0deg, #1A1819 0%, rgba(26,25,25,0.00) 100%);
     transition: opacity 300ms;
+    mix-blend-mode: multiply;
     opacity: 1;
  }
  
@@ -84,7 +93,14 @@
     left: 88px;
     top: 88px;
     transition: transform 300ms;
- 
+    font-family: SohneHalbfett;
+
+ }
+
+ .title::before{
+
+   content : "#certo_ou_errado"
+
  }
  
  .title.off{
@@ -168,6 +184,7 @@
     display: flex;
     justify-content: center;
     transition: transform 300ms;
+
  }
  
  .subtitle{

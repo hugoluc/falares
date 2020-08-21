@@ -34,7 +34,10 @@ function simplePlayer(_videoUrl,_subs,_title,_parent) {
         }
 
     });
-    this.video.addEventListener('canplaythrough', () => {  this.onloaded() });
+    this.video.addEventListener('canplaythrough', () => {  
+        this.onloaded() 
+        this.onlaoded = {}
+    });
     this.video.addEventListener('ended', () => { this.videoEnded() });
 
     //background
