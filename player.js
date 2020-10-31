@@ -7,6 +7,7 @@ function simplePlayer(_videoUrl,_subs,_title,_parent) {
 
     this.isVisible = true
     this.videoEnded = function(){}
+    this.loadedVideosUrl = []
 
     this.container = document.createElement('div')
     this.container.className = "playerVideo"
@@ -34,10 +35,23 @@ function simplePlayer(_videoUrl,_subs,_title,_parent) {
         }
 
     });
-    this.video.addEventListener('canplaythrough', () => {  
-        this.onloaded() 
+
+    this.video.addEventListener('canplaythrough', (_e) => {  
+        
+        for (let index = 0; index < this.loadedVideosUrl.length; index++) {
+            
+            if ( _e.target.currentSrc == this.loadedVideosUrl[index]){
+                return
+            }
+            
+        }
+
+        this.loadedVideosUrl.push(_e.target.currentSrc)
+        this.onloaded(_e) 
         this.onlaoded = {}
+        
     });
+
     this.video.addEventListener('ended', () => { this.videoEnded() });
 
     //background
@@ -443,11 +457,17 @@ subtilteControl.prototype.createDOMelements = function (_controlParent,_video,_s
 }
 
 subtilteControl.prototype.play = function () {
-    this.libras.video.play()
+    if(this.libras){
+        this.libras.video.play()
+    }
+        
 }
 
 subtilteControl.prototype.pause = function () {
-    this.libras.video.pause()
+    // debugger
+    if(this.libras){
+        this.libras.video.pause()
+    }
 }
 
 subtilteControl.prototype.openMenu = function () {
@@ -526,7 +546,9 @@ subtilteControl.prototype.selectSubtitle = function(_id) {
 }
 
 subtilteControl.prototype.setCurrentTime = function (_time) {
-    this.libras.video.currentTime = _time
+    if(this.libras){
+        this.libras.video.currentTime = _time
+    }
 }
 
 subtilteControl.prototype.setup = function () {

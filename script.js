@@ -3,8 +3,8 @@ var options = {
 
     videos  : [      
         {
-            videoUrl : "videos/0/certo ou errado_1.mp4",
-            title : "certo ou errado 1",
+            videoUrl : "videos/0/1_A LINGUA NO TEMPO 1.mov",
+            title : "a lingua do tempo 1",
             swearWords : false,
             subtitles : [
                 { 
@@ -34,8 +34,8 @@ var options = {
             ]
         },
         {
-            videoUrl : "videos/1/certo ou errado_2.mp4",
-            title : "certo ou errado 2",
+            videoUrl : "videos/1/2_A LINGUA NO TEMPO 2.mov",
+            title : "a lingua do tempo 2",
             swearWords : false,
             subtitles : [
                 { 
@@ -65,8 +65,8 @@ var options = {
             ]
         },        
         {
-            videoUrl : "videos/2/língua e opressão_1.mp4",
-            title : "língua e opressão 1",
+            videoUrl : "videos/2/3_VARIAÇOES NO FALAR 1.mov",
+            title : "variações do falar 1",
             swearWords : false,
             subtitles : [
                 { 
@@ -96,8 +96,8 @@ var options = {
             ]
         },  
         {
-            videoUrl : "videos/3/língua e opressão_2.mp4",
-            title : "língua e opressão 2",
+            videoUrl : "videos/3/4_VARIAÇOES NO FALAR 2.mov",
+            title : "variações do falar 2",
             swearWords : false,
             subtitles : [
                 { 
@@ -127,8 +127,8 @@ var options = {
             ]
         },        
         {
-            videoUrl : "videos/4/a língua no tempo_1.mp4",
-            title : "A língua no tempo",
+            videoUrl : "videos/4/5_CERTO OU ERRADO 1.mov",
+            title : "certo ou errado 1",
             swearWords : false,
             subtitles : [
                 { 
@@ -158,8 +158,8 @@ var options = {
             ]
         },        
         {
-            videoUrl : "videos/5/acordos ortográficos.mp4",
-            title : "Acordos ortográficos",
+            videoUrl : "videos/5/6_CERTO OU ERRADO 2.mov",
+            title : "certo ou errado 2",
             swearWords : false,
             subtitles : [
                 { 
@@ -189,8 +189,8 @@ var options = {
             ]
         },
         {
-            videoUrl : "videos/6/as variações no falar_1.mp4",
-            title : "As variações no falar",
+            videoUrl : "videos/6/7_LINGUA E OPRESSAO 1.mov",
+            title : "língua e opressão 1",
             swearWords : false,
             subtitles : [
                 { 
@@ -220,8 +220,8 @@ var options = {
             ]
         },
         {
-            videoUrl : "videos/7/palavrões e dialetos_1.mp4",
-            title : "Palavrões e dialetos 1",
+            videoUrl : "videos/7/8_LINGUA E OPRESSAO 2.mov",
+            title : "língua e opressão 2",
             swearWords : true,
             subtitles : [
                 { 
@@ -251,8 +251,8 @@ var options = {
             ]
         },
         {
-            videoUrl : "videos/8/palavrões e dialetos_2.mp4",
-            title : "Palavrões e dialetos 2",
+            videoUrl : "videos/8/9_LINGUA E OPRESSAO 3.mov",
+            title : "língua e opressão 3",
             swearWords : true,
             subtitles : [
                 { 
@@ -282,8 +282,8 @@ var options = {
             ]
         },
         {
-            videoUrl : "videos/9/palavrões e dialetos_3.mp4",
-            title : "Palavrões e dialetos 3",
+            videoUrl : "videos/9/10_PALAVROES E DIALETOS 1.mov",
+            title : "palavrões e dialetos 1",
             swearWords : true,
             subtitles : [
                 { 
@@ -312,7 +312,161 @@ var options = {
                 }
             ]
         },
-    
+        {
+            videoUrl : "videos/10/11_PALAVROES E DIALETOS 2.mov",
+            title : "palavrões e dialetos 2",
+            swearWords : true,
+            subtitles : [
+                { 
+                    type : "libras",
+                    url : 'libras.webm' ,
+                    title : "Libras",
+                    default : false
+                },
+                { 
+                    type : "text",
+                    url : 'videos/' + index + '/subs/es.vtt' ,
+                    title : "Ingles",
+                    default : false
+                },
+                { 
+                    type : "text",
+                    url : 'videos/' + index + '/subs/de.vtt' ,
+                    title : "Espanhol",
+                    default : false
+                },
+                { 
+                    type : "text",
+                    url : 'videos/' + index + '/subs/en.vtt' ,
+                    title : 'Portugês',
+                    default : true
+                }
+            ]
+        },
+        {
+            videoUrl : "videos/11/12_PALAVROES E DIALETOS 3.mov",
+            title : "palavrões e dialetos 3",
+            swearWords : true,
+            subtitles : [
+                { 
+                    type : "libras",
+                    url : 'libras.webm' ,
+                    title : "Libras",
+                    default : false
+                },
+                { 
+                    type : "text",
+                    url : 'videos/' + index + '/subs/es.vtt' ,
+                    title : "Ingles",
+                    default : false
+                },
+                { 
+                    type : "text",
+                    url : 'videos/' + index + '/subs/de.vtt' ,
+                    title : "Espanhol",
+                    default : false
+                },
+                { 
+                    type : "text",
+                    url : 'videos/' + index + '/subs/en.vtt' ,
+                    title : 'Portugês',
+                    default : true
+                }
+            ]
+        },
+        {
+            videoUrl : "videos/12/13_ACORDOS ORTOGRAFICOS.mov",
+            title : "acordos ortográficos",
+            swearWords : false,
+            subtitles : [
+                { 
+                    type : "libras",
+                    url : 'libras.webm' ,
+                    title : "Libras",
+                    default : false
+                },
+                { 
+                    type : "text",
+                    url : 'videos/' + index + '/subs/es.vtt' ,
+                    title : "Ingles",
+                    default : false
+                },
+                { 
+                    type : "text",
+                    url : 'videos/' + index + '/subs/de.vtt' ,
+                    title : "Espanhol",
+                    default : false
+                },
+                { 
+                    type : "text",
+                    url : 'videos/' + index + '/subs/en.vtt' ,
+                    title : 'Portugês',
+                    default : true
+                }
+            ]
+        },
+        {
+            videoUrl : "videos/13/14_LIBRAS E PORTUGUES_tensão e convergência.mov",
+            title : "libras e português 1",
+            swearWords : false,
+            subtitles : [
+                { 
+                    type : "libras",
+                    url : 'libras.webm' ,
+                    title : "Libras",
+                    default : false
+                },
+                { 
+                    type : "text",
+                    url : 'videos/' + index + '/subs/es.vtt' ,
+                    title : "Ingles",
+                    default : false
+                },
+                { 
+                    type : "text",
+                    url : 'videos/' + index + '/subs/de.vtt' ,
+                    title : "Espanhol",
+                    default : false
+                },
+                { 
+                    type : "text",
+                    url : 'videos/' + index + '/subs/en.vtt' ,
+                    title : 'Portugês',
+                    default : true
+                }
+            ]
+        },
+        {
+            videoUrl : "videos/14/15_LIBRAS E PORTUGUES_aprendizagens.mov",
+            title : "libras e português 2",
+            swearWords : false,
+            subtitles : [
+                // { 
+                //     type : "libras",
+                //     url : 'libras.webm' ,
+                //     title : "Libras",
+                //     default : false
+                // },
+                { 
+                    type : "text",
+                    url : 'videos/' + index + '/subs/es.vtt' ,
+                    title : "Ingles",
+                    default : false
+                },
+                { 
+                    type : "text",
+                    url : 'videos/' + index + '/subs/de.vtt' ,
+                    title : "Espanhol",
+                    default : false
+                },
+                { 
+                    type : "text",
+                    url : 'videos/' + index + '/subs/en.vtt' ,
+                    title : 'Portugês',
+                    default : true
+                }
+            ]
+        },
     ]
 
 }
@@ -328,6 +482,7 @@ function falares(_data){
     this.selectedVideoId = 0;
     this.moved = false
     this.menuOpened = true
+    this.videosLoaded = 0
 
     this.createDOMElements()
     this.changeVideo(0)
@@ -495,6 +650,13 @@ falares.prototype.createDOMElements = function(){
         this.createVideos(i,videosContaner,container)
              
     }
+    this.loadingOverlay = document.createElement('div')
+    this.loadingOverlay.className = "loadingOverlay"
+    this.loadingOverlay.innerHTML = '<div class="loader">loader</div>'
+
+    document.body.appendChild(this.loadingOverlay)
+
+
 
 }
 
@@ -512,13 +674,21 @@ falares.prototype.createVideos = function(_i, _videosContaner, _imageContainer){
     player.swearWords = this.data.videos[_i].swearWords
     this.videos.push(player)
         
-    player.onloaded = () => { 
-        this.getVideoImage(player,_imageContainer,1) 
+    player.onloaded = (_e) => { 
+
+        this.getVideoImage(player,_imageContainer,1,_e.target.currentSrc)
+        
     }
     
 }
 
-falares.prototype.getVideoImage = function(_player,_imageContainer,scale){
+falares.prototype.removeLoadingOverlay = function(_player,_imageContainer,scale){
+
+    this.loadingOverlay.style.display = "none"
+
+}
+
+falares.prototype.getVideoImage = function(_player,_imageContainer,scale,_url){
 
     scale = scale || 1;
 
@@ -528,6 +698,7 @@ falares.prototype.getVideoImage = function(_player,_imageContainer,scale){
     var context = canvas.getContext('2d')
     
     var getPixels = (__player) => {
+
         
         _player.video.currentTime = 30
         context.drawImage(_player.video, 0, 0, canvas.width, canvas.height);
@@ -549,17 +720,22 @@ falares.prototype.getVideoImage = function(_player,_imageContainer,scale){
     
                 if(_player.id != 0 ) _player.toggleVisibility()
                 _player.onloaded = () =>{}
+
+                this.videosLoaded++
+                if(this.videosLoaded == this.videos.length){
+                    this.removeLoadingOverlay()
+                }
                 
             }
 
             _player.video.currentTime = 0
             _player.controls.setCurrentTime(0)
 
+
         }
 
     }
 
-    console.log(_player.id);    
     getPixels(_player)
 
 }
