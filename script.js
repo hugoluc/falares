@@ -3,7 +3,7 @@ var options = {
 
     videos  : [      
         {
-            videoUrl : "videos/0/1_A LINGUA NO TEMPO 1.mov",
+            videoUrl : "videos/0/0.mp4",
             title : "a lingua do tempo 1",
             swearWords : false,
             subtitles : [
@@ -34,7 +34,7 @@ var options = {
             ]
         },
         {
-            videoUrl : "videos/1/2_A LINGUA NO TEMPO 2.mov",
+            videoUrl : "videos/1/1.mp4",
             title : "a lingua do tempo 2",
             swearWords : false,
             subtitles : [
@@ -65,7 +65,7 @@ var options = {
             ]
         },        
         {
-            videoUrl : "videos/2/3_VARIAÇOES NO FALAR 1.mov",
+            videoUrl : "videos/2/2.mp4",
             title : "variações do falar 1",
             swearWords : false,
             subtitles : [
@@ -96,7 +96,7 @@ var options = {
             ]
         },  
         {
-            videoUrl : "videos/3/4_VARIAÇOES NO FALAR 2.mov",
+            videoUrl : "videos/3/3.mp4",
             title : "variações do falar 2",
             swearWords : false,
             subtitles : [
@@ -127,7 +127,7 @@ var options = {
             ]
         },        
         {
-            videoUrl : "videos/4/5_CERTO OU ERRADO 1.mov",
+            videoUrl : "videos/4/4.mp4",
             title : "certo ou errado 1",
             swearWords : false,
             subtitles : [
@@ -158,7 +158,7 @@ var options = {
             ]
         },        
         {
-            videoUrl : "videos/5/6_CERTO OU ERRADO 2.mov",
+            videoUrl : "videos/5/5.mp4",
             title : "certo ou errado 2",
             swearWords : false,
             subtitles : [
@@ -189,7 +189,7 @@ var options = {
             ]
         },
         {
-            videoUrl : "videos/6/7_LINGUA E OPRESSAO 1.mov",
+            videoUrl : "videos/6/6.mp4",
             title : "língua e opressão 1",
             swearWords : false,
             subtitles : [
@@ -220,9 +220,9 @@ var options = {
             ]
         },
         {
-            videoUrl : "videos/7/8_LINGUA E OPRESSAO 2.mov",
+            videoUrl : "videos/7/7.mp4",
             title : "língua e opressão 2",
-            swearWords : true,
+            swearWords : false,
             subtitles : [
                 { 
                     type : "libras",
@@ -251,9 +251,9 @@ var options = {
             ]
         },
         {
-            videoUrl : "videos/8/9_LINGUA E OPRESSAO 3.mov",
+            videoUrl : "videos/8/8.mp4",
             title : "língua e opressão 3",
-            swearWords : true,
+            swearWords : false,
             subtitles : [
                 { 
                     type : "libras",
@@ -282,7 +282,7 @@ var options = {
             ]
         },
         {
-            videoUrl : "videos/9/10_PALAVROES E DIALETOS 1.mov",
+            videoUrl : "videos/9/9.mp4",
             title : "palavrões e dialetos 1",
             swearWords : true,
             subtitles : [
@@ -313,7 +313,7 @@ var options = {
             ]
         },
         {
-            videoUrl : "videos/10/11_PALAVROES E DIALETOS 2.mov",
+            videoUrl : "videos/10/10.mp4",
             title : "palavrões e dialetos 2",
             swearWords : true,
             subtitles : [
@@ -344,7 +344,7 @@ var options = {
             ]
         },
         {
-            videoUrl : "videos/11/12_PALAVROES E DIALETOS 3.mov",
+            videoUrl : "videos/11/11.mp4",
             title : "palavrões e dialetos 3",
             swearWords : true,
             subtitles : [
@@ -375,7 +375,7 @@ var options = {
             ]
         },
         {
-            videoUrl : "videos/12/13_ACORDOS ORTOGRAFICOS.mov",
+            videoUrl : "videos/12/12.mp4",
             title : "acordos ortográficos",
             swearWords : false,
             subtitles : [
@@ -406,7 +406,7 @@ var options = {
             ]
         },
         {
-            videoUrl : "videos/13/14_LIBRAS E PORTUGUES_tensão e convergência.mov",
+            videoUrl : "videos/13/13.mp4",
             title : "libras e português 1",
             swearWords : false,
             subtitles : [
@@ -418,13 +418,13 @@ var options = {
                 },
                 { 
                     type : "text",
-                    url : 'videos/' + index + '/subs/es.vtt' ,
+                    url : 'videos/' + index + '/subs/es.vtt',
                     title : "Ingles",
                     default : false
                 },
                 { 
                     type : "text",
-                    url : 'videos/' + index + '/subs/de.vtt' ,
+                    url : 'videos/' + index + '/subs/de.vtt',
                     title : "Espanhol",
                     default : false
                 },
@@ -437,7 +437,7 @@ var options = {
             ]
         },
         {
-            videoUrl : "videos/14/15_LIBRAS E PORTUGUES_aprendizagens.mov",
+            videoUrl : "videos/14/14.mp4",
             title : "libras e português 2",
             swearWords : false,
             subtitles : [
@@ -620,7 +620,6 @@ falares.prototype.createDOMElements = function(){
         container.addEventListener("touchend", _event =>{    
             if(i != this.selectedVideoId){
                 this.changeVideo(i);
-                this.videos[this.selectedVideoId].controls.play()
             }
             this.moved = false            
         })
@@ -652,11 +651,9 @@ falares.prototype.createDOMElements = function(){
     }
     this.loadingOverlay = document.createElement('div')
     this.loadingOverlay.className = "loadingOverlay"
-    this.loadingOverlay.innerHTML = '<div class="loader">loader</div>'
+    this.loadingOverlay.innerHTML = '<div class="loader"></div>'
 
     document.body.appendChild(this.loadingOverlay)
-
-
 
 }
 
@@ -724,6 +721,7 @@ falares.prototype.getVideoImage = function(_player,_imageContainer,scale,_url){
                 this.videosLoaded++
                 if(this.videosLoaded == this.videos.length){
                     this.removeLoadingOverlay()
+                    this.changeVideo(0)
                 }
                 
             }
@@ -846,6 +844,8 @@ falares.prototype.changeVideo = function(_index){
     this.videos[_index].toggleVisibility()
     this.overlays[_index].style.display = "block"
     this.selectedVideoId = _index
+    
+    this.videos[this.selectedVideoId].controls.play()
 
 }
 

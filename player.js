@@ -39,11 +39,11 @@ function simplePlayer(_videoUrl,_subs,_title,_parent) {
     this.video.addEventListener('canplaythrough', (_e) => {  
         
         for (let index = 0; index < this.loadedVideosUrl.length; index++) {
-            
+
             if ( _e.target.currentSrc == this.loadedVideosUrl[index]){
                 return
             }
-            
+
         }
 
         this.loadedVideosUrl.push(_e.target.currentSrc)
@@ -215,6 +215,8 @@ timeLineControl.prototype.timeUpdated = function (_time) {
 
 timeLineControl.prototype.play = function (_time) {
     
+    console.log("----");
+
     this.subtilteControl.play()
     this.video.play()
     this.isPlaying = true
