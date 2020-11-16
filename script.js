@@ -485,7 +485,6 @@ function falares(_data){
     this.videosLoaded = 0
 
     this.createDOMElements()
-    this.changeVideo(0)
 }
 
 //===============================================================
@@ -723,6 +722,7 @@ falares.prototype.getVideoImage = function(_player,_imageContainer,scale,_url){
                     this.removeLoadingOverlay()
                     this.changeVideo(0)
                 }
+                // _player.removeVideoElement()
                 
             }
 
@@ -812,7 +812,6 @@ falares.prototype.exitFullScreen = function(){
 }
 
 falares.prototype.changeVideo = function(_index){
-
     //do nothing if mouse is moving
     if(this.moved) return
 

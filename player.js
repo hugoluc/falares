@@ -8,6 +8,7 @@ function simplePlayer(_videoUrl,_subs,_title,_parent) {
     this.isVisible = true
     this.videoEnded = function(){}
     this.loadedVideosUrl = []
+    this.videoUrl = _videoUrl
 
     this.container = document.createElement('div')
     this.container.className = "playerVideo"
@@ -19,10 +20,32 @@ function simplePlayer(_videoUrl,_subs,_title,_parent) {
     this.videoContainer.className = "videoContainer"
     this.videoContainer.addEventListener('touchstart', e => { this.controls.togglePlay() })
     this.container.appendChild(this.videoContainer)
+    this.creteVideoElement()
 
+    //background
+    this.controlContainer = document.createElement('div')
+    this.controlContainer.className = "controlContainer"
+    this.container.appendChild(this.controlContainer)
+
+    //controlers
+    this.btnsContainer = document.createElement('div')
+    this.btnsContainer.style.transform = "translate(0px, px)"
+    this.btnsContainer.className = "btnsContainer"
+    this.controlContainer.appendChild(this.btnsContainer)
+    
+    this.controls = new timeLineControl( this.video, this.btnsContainer, this.controlContainer, this.videoContainer, _subs, _title ) 
+
+}
+
+simplePlayer.prototype.load = function(){
+    this.controls.subtilteControl.setup()
+}
+
+simplePlayer.prototype.creteVideoElement = function(){
+    
     this.video = document.createElement('video')
     this.video.isLoaded = false
-    this.video.src = _videoUrl
+    this.video.src = this.videoUrl
     this.videoContainer.appendChild(this.video)
     this.video.addEventListener('loadedmetadata', () => { 
 
@@ -49,29 +72,27 @@ function simplePlayer(_videoUrl,_subs,_title,_parent) {
         this.loadedVideosUrl.push(_e.target.currentSrc)
         this.onloaded(_e) 
         this.onlaoded = {}
-        
+
     });
 
     this.video.addEventListener('ended', () => { this.videoEnded() });
-
-    //background
-    this.controlContainer = document.createElement('div')
-    this.controlContainer.className = "controlContainer"
-    this.container.appendChild(this.controlContainer)
-
-    //controlers
-    this.btnsContainer = document.createElement('div')
-    this.btnsContainer.style.transform = "translate(0px, px)"
-    this.btnsContainer.className = "btnsContainer"
-    this.controlContainer.appendChild(this.btnsContainer)
     
-    this.controls = new timeLineControl( this.video, this.btnsContainer, this.controlContainer, this.videoContainer, _subs, _title ) 
+}
+
+simplePlayer.prototype.removeVideoElement = function(){
+
+
+    while(this.videoContainer.children.length > 0){
+
+        this.videoContainer.children[0].src = ""
+        this.videoContainer.removeChild(this.videoContainer.children[0])
+        this.video = ""
+
+    }
+
 
 }
 
-simplePlayer.prototype.load = function(){
-    this.controls.subtilteControl.setup()
-}
 
 simplePlayer.prototype.toggleVisibility = function(){
     
