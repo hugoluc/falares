@@ -93,7 +93,6 @@ simplePlayer.prototype.removeVideoElement = function(){
 
 }
 
-
 simplePlayer.prototype.toggleVisibility = function(){
     
 

@@ -688,20 +688,19 @@ falares.prototype.getVideoImage = function(_player,_imageContainer,scale,_url){
 
     scale = scale || 1;
 
-    const canvas = document.createElement("canvas");
+    var canvas = document.createElement("canvas");
     canvas.width = _player.video.clientWidth * scale;
     canvas.height = _player.video.clientHeight * scale;
     var context = canvas.getContext('2d')
     
     var getPixels = (__player) => {
 
-        
         _player.video.currentTime = 30
         context.drawImage(_player.video, 0, 0, canvas.width, canvas.height);
         var pixels = context.getImageData(0,0,100,100).data
 
-        if(pixels[0]==0 && pixels[0]==0 && !_player.imageLoaded){
-            setTimeout(() => { getPixels()} , 1000)
+        if(pixels[0]== 0 && pixels[3] == 0 && !_player.imageLoaded){
+            setTimeout(() => { getPixels(__player)} , 1000)
         }else{
 
             _player.imageLoaded = true
