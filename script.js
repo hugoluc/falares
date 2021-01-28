@@ -1,4 +1,3 @@
-
 var options = {
 
     videos  : [      
@@ -9,7 +8,7 @@ var options = {
             subtitles : [
                 { 
                     type : "libras",
-                    url : 'libras.webm' ,
+                    url : 'videos/' + index + '/libras.webm', 
                     title : "Libras",
                     default : false
                 },
@@ -40,7 +39,7 @@ var options = {
             subtitles : [
                 { 
                     type : "libras",
-                    url : 'libras.webm' ,
+                    url : 'videos/' + index + '/libras.webm',
                     title : "Libras",
                     default : false
                 },
@@ -71,7 +70,7 @@ var options = {
             subtitles : [
                 { 
                     type : "libras",
-                    url : 'libras.webm' ,
+                    url : 'videos/' + index + '/libras.webm',
                     title : "Libras",
                     default : false
                 },
@@ -102,7 +101,7 @@ var options = {
             subtitles : [
                 { 
                     type : "libras",
-                    url : 'libras.webm' ,
+                    url : 'videos/' + index + '/libras.webm',
                     title : "Libras",
                     default : false
                 },
@@ -133,7 +132,7 @@ var options = {
             subtitles : [
                 { 
                     type : "libras",
-                    url : 'libras.webm' ,
+                    url : 'videos/' + index + '/libras.webm',
                     title : "Libras",
                     default : false
                 },
@@ -164,7 +163,7 @@ var options = {
             subtitles : [
                 { 
                     type : "libras",
-                    url : 'libras.webm' ,
+                    url : 'videos/' + index + '/libras.webm',
                     title : "Libras",
                     default : false
                 },
@@ -195,7 +194,7 @@ var options = {
             subtitles : [
                 { 
                     type : "libras",
-                    url : 'libras.webm' ,
+                    url : 'videos/' + index + '/libras.webm',
                     title : "Libras",
                     default : false
                 },
@@ -226,7 +225,7 @@ var options = {
             subtitles : [
                 { 
                     type : "libras",
-                    url : 'libras.webm' ,
+                    url : 'videos/' + index + '/libras.webm',
                     title : "Libras",
                     default : false
                 },
@@ -257,7 +256,7 @@ var options = {
             subtitles : [
                 { 
                     type : "libras",
-                    url : 'libras.webm' ,
+                    url : 'videos/' + index + '/libras.webm',
                     title : "Libras",
                     default : false
                 },
@@ -288,7 +287,7 @@ var options = {
             subtitles : [
                 { 
                     type : "libras",
-                    url : 'libras.webm' ,
+                    url : 'videos/' + index + '/libras.webm',
                     title : "Libras",
                     default : false
                 },
@@ -319,7 +318,7 @@ var options = {
             subtitles : [
                 { 
                     type : "libras",
-                    url : 'libras.webm' ,
+                    url : 'videos/' + index + '/libras.webm',
                     title : "Libras",
                     default : false
                 },
@@ -350,7 +349,7 @@ var options = {
             subtitles : [
                 { 
                     type : "libras",
-                    url : 'libras.webm' ,
+                    url : 'videos/' + index + '/libras.webm',
                     title : "Libras",
                     default : false
                 },
@@ -381,7 +380,7 @@ var options = {
             subtitles : [
                 { 
                     type : "libras",
-                    url : 'libras.webm' ,
+                    url : 'videos/' + index + '/libras.webm',
                     title : "Libras",
                     default : false
                 },
@@ -412,7 +411,7 @@ var options = {
             subtitles : [
                 { 
                     type : "libras",
-                    url : 'libras.webm' ,
+                    url : 'videos/' + index + '/libras.webm',
                     title : "Libras",
                     default : false
                 },
@@ -443,7 +442,7 @@ var options = {
             subtitles : [
                 // { 
                 //     type : "libras",
-                //     url : 'libras.webm' ,
+                //     url : 'videos/' + index + '/libras.webm',
                 //     title : "Libras",
                 //     default : false
                 // },
@@ -470,7 +469,6 @@ var options = {
     ]
 
 }
-
 
 function falares(_data){
 

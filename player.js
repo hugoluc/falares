@@ -432,7 +432,7 @@ subtilteControl.prototype.createDOMelements = function (_controlParent,_video,_s
         if(_subs[i].type == "text"){
             sub = new subtitle(_video,_subs[i], i, this.subtitlesContainer)
         }else{
-            sub = new libras(_video,_subs[i], i, _subParent)
+            sub = new libras(_video, _subs[i], i, _subParent)
             this.libras = sub
         }
         this.subtitles.push( sub )
