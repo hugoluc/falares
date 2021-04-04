@@ -33,7 +33,7 @@ function simplePlayer(_videoUrl,_subs,_title,_parent) {
     this.btnsContainer.className = "btnsContainer"
     this.controlContainer.appendChild(this.btnsContainer)
     
-    this.controls = new timeLineControl( this.video, this.btnsContainer, this.controlContainer, this.videoContainer, _subs, _title ) 
+    this.controls = new timeLineControl( this.video, this.btnsContainer, this.controlContainer, this.videoContainer, this.container ,_subs, _title ) 
 
 }
 
@@ -116,7 +116,7 @@ simplePlayer.prototype.toggleVisibility = function(){
 
 // Timeline controls
 // Pause/play controls
-function timeLineControl(_video, _parent, _controlContainer, _container, _subs, _title){
+function timeLineControl(_video, _parent, _controlContainer, _container, _videoContainer ,_subs, _title){
 
     _video.addEventListener('timeupdate', (_event)=>{ 
         if (_event.target.currentTime >= this.video.duration) {}
@@ -132,9 +132,9 @@ function timeLineControl(_video, _parent, _controlContainer, _container, _subs, 
     this.userInteracted = false
     this.menuOpen = true
 
-    this.createDOMelements(_parent, _controlContainer,_container)
+    this.createDOMelements(_parent, _controlContainer)
 
-    this.subtilteControl = new subtilteControl(  _subs, _video, _container, _parent)
+    this.subtilteControl = new subtilteControl( _subs, _video, _container, _parent,_videoContainer )
     this.subtilteControl.interactionHandler = () => { this.closeControlTimeout() }
     this.subtilteControl.subtitlesContainer.style.transform = "translate(0px,-150px)"
 
@@ -147,7 +147,7 @@ function timeLineControl(_video, _parent, _controlContainer, _container, _subs, 
 
 }
 
-timeLineControl.prototype.createDOMelements = function (_parent,_controlContainer,_container) {
+timeLineControl.prototype.createDOMelements = function (_parent,_controlContainer) {
     
     this.container = document.createElement('div')
     this.container.className = "timeLineControls"
@@ -156,7 +156,6 @@ timeLineControl.prototype.createDOMelements = function (_parent,_controlContaine
     this.title = document.createElement('div')
     this.title.innerHTML = this.titleText
     this.title.className = "title"
-    // _container.appendChild(this.title)
 
     this.playBtn = document.createElement('div')
     this.playBtn.className = "play-pause"
@@ -234,8 +233,6 @@ timeLineControl.prototype.timeUpdated = function (_time) {
 //=========================================================================
 
 timeLineControl.prototype.play = function (_time) {
-    
-    console.log("----");
 
     this.subtilteControl.play()
     this.video.play()
@@ -349,7 +346,7 @@ timeLineControl.prototype.closeControlTimeout = function(){
 //===================        Control Class        ====================
 //====================================================================
 
-function subtilteControl(_subs,_video,_subParent, _controlParent){
+function subtilteControl(_subs,_video,_subParent, _controlParent, _videoContainer){
 
     //get opened menu height based on subtitle number
     this.menuItemSizes = {
@@ -366,12 +363,12 @@ function subtilteControl(_subs,_video,_subParent, _controlParent){
     this.activeSubtitle = ""
     this.defaultSubtitle = false
 
-    this.createDOMelements(_controlParent,_video,_subs,_subParent)
+    this.createDOMelements(_controlParent,_video,_subs,_subParent,_videoContainer)
     this.closeMenu()
  
 }
 
-subtilteControl.prototype.createDOMelements = function (_controlParent,_video,_subs,_subParent) {
+subtilteControl.prototype.createDOMelements = function (_controlParent,_video,_subs,_subParent,_videoContainer) {
     
     //-------------------
     //    container
@@ -387,14 +384,19 @@ subtilteControl.prototype.createDOMelements = function (_controlParent,_video,_s
     this.controlBg.className = "controlBg"
     this.controlBg.style.height = this.openMenuHeight
     this.controlContainer.appendChild(this.controlBg)
-
+    if(_subs){
+        this.openMenuHeight = (2 * this.menuItemSizes.margin)  + (_subs.length * this.menuItemSizes.itemHeight)
+        this.controlBg.style.height = this.openMenuHeight
+    }
+    
     //-------------------
     //    subtitles
     //-------------------
     
     this.subtitlesContainer = document.createElement("div")
     this.subtitlesContainer.className = "subtitlesContainer"
-    _video.insertAdjacentElement("afterEnd", this.subtitlesContainer)
+    
+    _videoContainer.appendChild(this.subtitlesContainer)
 
     for(var i = 0; i < _subs.length; i++ ){
         
