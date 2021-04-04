@@ -403,10 +403,10 @@ subtilteControl.prototype.createDOMelements = function (_controlParent,_video,_s
         control.id = i
         control.className = "subControl"
         control.innerHTML = _subs[i].title
-        control.addEventListener('touchstart', e => {
-            console.log("00000");
-            if (!this.animationEnded) return
+        control.addEventListener('touchend', e => {
 
+            if (!this.animationEnded) return
+            
             this.animationEnded = false
             if(!this.menuClosed){
                 this.selectSubtitle(e.target.id)
@@ -447,20 +447,22 @@ subtilteControl.prototype.createDOMelements = function (_controlParent,_video,_s
     this.iconContainer = document.createElement("div")
     this.iconContainer.className = "iconContainer"
     this.controlContainer.appendChild(this.iconContainer)
-    this.controlContainer.addEventListener('touchstart', e => {
-
-        console.log("00000");
-
+    this.iconContainer.addEventListener('touchend', e => {
+        
         if (!this.animationEnded) return
+        
+        this.animationEnded = false
+        if(!this.menuClosed){
+            this.closeMenu()
+        }else{
+            this.openMenu()
+        }
 
-            this.animationEnded = false
-            if(!this.menuClosed){
-                this.closeMenu()
-            }else{
-                this.openMenu()
-            }
+    }
+    
 
-    })
+
+    )
 
     //left
     this.iconLeft = document.createElement("div")

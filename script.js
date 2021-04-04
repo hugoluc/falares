@@ -14,19 +14,19 @@ var options = {
                 },
                 { 
                     type : "text",
-                    url : 'videos/' + index + '/subs/es.vtt' ,
-                    title : "Ingles",
-                    default : false
-                },
-                { 
-                    type : "text",
-                    url : 'videos/' + index + '/subs/de.vtt' ,
-                    title : "Espanhol",
-                    default : false
-                },
-                { 
-                    type : "text",
                     url : 'videos/' + index + '/subs/en.vtt' ,
+                    title : "English",
+                    default : false
+                },
+                { 
+                    type : "text",
+                    url : 'videos/' + index + '/subs/es.vtt' ,
+                    title : "Español",
+                    default : false
+                },
+                { 
+                    type : "text",
+                    url : 'videos/' + index + '/subs/pt.vtt' ,
                     title : 'Portugês',
                     default : true
                 }
@@ -45,19 +45,19 @@ var options = {
                 },
                 { 
                     type : "text",
-                    url : 'videos/' + index + '/subs/es.vtt' ,
-                    title : "Ingles",
-                    default : false
-                },
-                { 
-                    type : "text",
-                    url : 'videos/' + index + '/subs/de.vtt' ,
-                    title : "Espanhol",
-                    default : false
-                },
-                { 
-                    type : "text",
                     url : 'videos/' + index + '/subs/en.vtt' ,
+                    title : "English",
+                    default : false
+                },
+                { 
+                    type : "text",
+                    url : 'videos/' + index + '/subs/es.vtt' ,
+                    title : "Español",
+                    default : false
+                },
+                { 
+                    type : "text",
+                    url : 'videos/' + index + '/subs/pt.vtt' ,
                     title : 'Portugês',
                     default : true
                 }
@@ -76,19 +76,19 @@ var options = {
                 },
                 { 
                     type : "text",
-                    url : 'videos/' + index + '/subs/es.vtt' ,
-                    title : "Ingles",
-                    default : false
-                },
-                { 
-                    type : "text",
-                    url : 'videos/' + index + '/subs/de.vtt' ,
-                    title : "Espanhol",
-                    default : false
-                },
-                { 
-                    type : "text",
                     url : 'videos/' + index + '/subs/en.vtt' ,
+                    title : "English",
+                    default : false
+                },
+                { 
+                    type : "text",
+                    url : 'videos/' + index + '/subs/es.vtt' ,
+                    title : "Español",
+                    default : false
+                },
+                { 
+                    type : "text",
+                    url : 'videos/' + index + '/subs/pt.vtt' ,
                     title : 'Portugês',
                     default : true
                 }
@@ -107,19 +107,19 @@ var options = {
                 },
                 { 
                     type : "text",
-                    url : 'videos/' + index + '/subs/es.vtt' ,
-                    title : "Ingles",
-                    default : false
-                },
-                { 
-                    type : "text",
-                    url : 'videos/' + index + '/subs/de.vtt' ,
-                    title : "Espanhol",
-                    default : false
-                },
-                { 
-                    type : "text",
                     url : 'videos/' + index + '/subs/en.vtt' ,
+                    title : "English",
+                    default : false
+                },
+                { 
+                    type : "text",
+                    url : 'videos/' + index + '/subs/es.vtt' ,
+                    title : "Español",
+                    default : false
+                },
+                { 
+                    type : "text",
+                    url : 'videos/' + index + '/subs/pt.vtt' ,
                     title : 'Portugês',
                     default : true
                 }
@@ -138,19 +138,19 @@ var options = {
                 },
                 { 
                     type : "text",
-                    url : 'videos/' + index + '/subs/es.vtt' ,
-                    title : "Ingles",
-                    default : false
-                },
-                { 
-                    type : "text",
-                    url : 'videos/' + index + '/subs/de.vtt' ,
-                    title : "Espanhol",
-                    default : false
-                },
-                { 
-                    type : "text",
                     url : 'videos/' + index + '/subs/en.vtt' ,
+                    title : "English",
+                    default : false
+                },
+                { 
+                    type : "text",
+                    url : 'videos/' + index + '/subs/es.vtt' ,
+                    title : "Español",
+                    default : false
+                },
+                { 
+                    type : "text",
+                    url : 'videos/' + index + '/subs/pt.vtt' ,
                     title : 'Portugês',
                     default : true
                 }
@@ -169,19 +169,19 @@ var options = {
                 },
                 { 
                     type : "text",
-                    url : 'videos/' + index + '/subs/es.vtt' ,
-                    title : "Ingles",
-                    default : false
-                },
-                { 
-                    type : "text",
-                    url : 'videos/' + index + '/subs/de.vtt' ,
-                    title : "Espanhol",
-                    default : false
-                },
-                { 
-                    type : "text",
                     url : 'videos/' + index + '/subs/en.vtt' ,
+                    title : "English",
+                    default : false
+                },
+                { 
+                    type : "text",
+                    url : 'videos/' + index + '/subs/es.vtt' ,
+                    title : "Español",
+                    default : false
+                },
+                { 
+                    type : "text",
+                    url : 'videos/' + index + '/subs/pt.vtt' ,
                     title : 'Portugês',
                     default : true
                 }
@@ -200,19 +200,19 @@ var options = {
                 },
                 { 
                     type : "text",
-                    url : 'videos/' + index + '/subs/es.vtt' ,
-                    title : "Ingles",
-                    default : false
-                },
-                { 
-                    type : "text",
-                    url : 'videos/' + index + '/subs/de.vtt' ,
-                    title : "Espanhol",
-                    default : false
-                },
-                { 
-                    type : "text",
                     url : 'videos/' + index + '/subs/en.vtt' ,
+                    title : "English",
+                    default : false
+                },
+                { 
+                    type : "text",
+                    url : 'videos/' + index + '/subs/es.vtt' ,
+                    title : "Español",
+                    default : false
+                },
+                { 
+                    type : "text",
+                    url : 'videos/' + index + '/subs/pt.vtt' ,
                     title : 'Portugês',
                     default : true
                 }
@@ -231,19 +231,19 @@ var options = {
                 },
                 { 
                     type : "text",
-                    url : 'videos/' + index + '/subs/es.vtt' ,
-                    title : "Ingles",
-                    default : false
-                },
-                { 
-                    type : "text",
-                    url : 'videos/' + index + '/subs/de.vtt' ,
-                    title : "Espanhol",
-                    default : false
-                },
-                { 
-                    type : "text",
                     url : 'videos/' + index + '/subs/en.vtt' ,
+                    title : "English",
+                    default : false
+                },
+                { 
+                    type : "text",
+                    url : 'videos/' + index + '/subs/es.vtt' ,
+                    title : "Español",
+                    default : false
+                },
+                { 
+                    type : "text",
+                    url : 'videos/' + index + '/subs/pt.vtt' ,
                     title : 'Portugês',
                     default : true
                 }
@@ -262,19 +262,19 @@ var options = {
                 },
                 { 
                     type : "text",
-                    url : 'videos/' + index + '/subs/es.vtt' ,
-                    title : "Ingles",
-                    default : false
-                },
-                { 
-                    type : "text",
-                    url : 'videos/' + index + '/subs/de.vtt' ,
-                    title : "Espanhol",
-                    default : false
-                },
-                { 
-                    type : "text",
                     url : 'videos/' + index + '/subs/en.vtt' ,
+                    title : "English",
+                    default : false
+                },
+                { 
+                    type : "text",
+                    url : 'videos/' + index + '/subs/es.vtt' ,
+                    title : "Español",
+                    default : false
+                },
+                { 
+                    type : "text",
+                    url : 'videos/' + index + '/subs/pt.vtt' ,
                     title : 'Portugês',
                     default : true
                 }
@@ -293,19 +293,19 @@ var options = {
                 },
                 { 
                     type : "text",
-                    url : 'videos/' + index + '/subs/es.vtt' ,
-                    title : "Ingles",
-                    default : false
-                },
-                { 
-                    type : "text",
-                    url : 'videos/' + index + '/subs/de.vtt' ,
-                    title : "Espanhol",
-                    default : false
-                },
-                { 
-                    type : "text",
                     url : 'videos/' + index + '/subs/en.vtt' ,
+                    title : "English",
+                    default : false
+                },
+                { 
+                    type : "text",
+                    url : 'videos/' + index + '/subs/es.vtt' ,
+                    title : "Español",
+                    default : false
+                },
+                { 
+                    type : "text",
+                    url : 'videos/' + index + '/subs/pt.vtt' ,
                     title : 'Portugês',
                     default : true
                 }
@@ -324,19 +324,19 @@ var options = {
                 },
                 { 
                     type : "text",
-                    url : 'videos/' + index + '/subs/es.vtt' ,
-                    title : "Ingles",
-                    default : false
-                },
-                { 
-                    type : "text",
-                    url : 'videos/' + index + '/subs/de.vtt' ,
-                    title : "Espanhol",
-                    default : false
-                },
-                { 
-                    type : "text",
                     url : 'videos/' + index + '/subs/en.vtt' ,
+                    title : "English",
+                    default : false
+                },
+                { 
+                    type : "text",
+                    url : 'videos/' + index + '/subs/es.vtt' ,
+                    title : "Español",
+                    default : false
+                },
+                { 
+                    type : "text",
+                    url : 'videos/' + index + '/subs/pt.vtt' ,
                     title : 'Portugês',
                     default : true
                 }
@@ -355,19 +355,19 @@ var options = {
                 },
                 { 
                     type : "text",
-                    url : 'videos/' + index + '/subs/es.vtt' ,
-                    title : "Ingles",
-                    default : false
-                },
-                { 
-                    type : "text",
-                    url : 'videos/' + index + '/subs/de.vtt' ,
-                    title : "Espanhol",
-                    default : false
-                },
-                { 
-                    type : "text",
                     url : 'videos/' + index + '/subs/en.vtt' ,
+                    title : "English",
+                    default : false
+                },
+                { 
+                    type : "text",
+                    url : 'videos/' + index + '/subs/es.vtt' ,
+                    title : "Español",
+                    default : false
+                },
+                { 
+                    type : "text",
+                    url : 'videos/' + index + '/subs/pt.vtt' ,
                     title : 'Portugês',
                     default : true
                 }
@@ -386,19 +386,19 @@ var options = {
                 },
                 { 
                     type : "text",
-                    url : 'videos/' + index + '/subs/es.vtt' ,
-                    title : "Ingles",
-                    default : false
-                },
-                { 
-                    type : "text",
-                    url : 'videos/' + index + '/subs/de.vtt' ,
-                    title : "Espanhol",
-                    default : false
-                },
-                { 
-                    type : "text",
                     url : 'videos/' + index + '/subs/en.vtt' ,
+                    title : "English",
+                    default : false
+                },
+                { 
+                    type : "text",
+                    url : 'videos/' + index + '/subs/es.vtt' ,
+                    title : "Español",
+                    default : false
+                },
+                { 
+                    type : "text",
+                    url : 'videos/' + index + '/subs/pt.vtt' ,
                     title : 'Portugês',
                     default : true
                 }
@@ -417,19 +417,19 @@ var options = {
                 },
                 { 
                     type : "text",
+                    url : 'videos/' + index + '/subs/en.vtt',
+                    title : "English",
+                    default : false
+                },
+                { 
+                    type : "text",
                     url : 'videos/' + index + '/subs/es.vtt',
-                    title : "Ingles",
+                    title : "Español",
                     default : false
                 },
                 { 
                     type : "text",
-                    url : 'videos/' + index + '/subs/de.vtt',
-                    title : "Espanhol",
-                    default : false
-                },
-                { 
-                    type : "text",
-                    url : 'videos/' + index + '/subs/en.vtt' ,
+                    url : 'videos/' + index + '/subs/pt.vtt' ,
                     title : 'Portugês',
                     default : true
                 }
@@ -448,19 +448,19 @@ var options = {
                 // },
                 { 
                     type : "text",
-                    url : 'videos/' + index + '/subs/es.vtt' ,
-                    title : "Ingles",
-                    default : false
-                },
-                { 
-                    type : "text",
-                    url : 'videos/' + index + '/subs/de.vtt' ,
-                    title : "Espanhol",
-                    default : false
-                },
-                { 
-                    type : "text",
                     url : 'videos/' + index + '/subs/en.vtt' ,
+                    title : "English",
+                    default : false
+                },
+                { 
+                    type : "text",
+                    url : 'videos/' + index + '/subs/es.vtt' ,
+                    title : "Español",
+                    default : false
+                },
+                { 
+                    type : "text",
+                    url : 'videos/' + index + '/subs/pt.vtt' ,
                     title : 'Portugês',
                     default : true
                 }
