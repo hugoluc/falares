@@ -741,7 +741,6 @@ falares.prototype.videoEnded = function(_id){
 
     while(this.videos[(_id + increment)%this.videos.length].swearWords == true){
         increment++
-        console.log(increment);
         
     }
 
