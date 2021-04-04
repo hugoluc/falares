@@ -8,7 +8,7 @@ var options = {
             subtitles : [
                 { 
                     type : "libras",
-                    url : 'videos/' + index + '/libras.webm', 
+                    url : 'videos/' + index + '/libras.mp4', 
                     title : "Libras",
                     default : false
                 },
@@ -39,7 +39,7 @@ var options = {
             subtitles : [
                 { 
                     type : "libras",
-                    url : 'videos/' + index + '/libras.webm',
+                    url : 'videos/' + index + '/libras.mp4',
                     title : "Libras",
                     default : false
                 },
@@ -70,7 +70,7 @@ var options = {
             subtitles : [
                 { 
                     type : "libras",
-                    url : 'videos/' + index + '/libras.webm',
+                    url : 'videos/' + index + '/libras.mp4',
                     title : "Libras",
                     default : false
                 },
@@ -101,7 +101,7 @@ var options = {
             subtitles : [
                 { 
                     type : "libras",
-                    url : 'videos/' + index + '/libras.webm',
+                    url : 'videos/' + index + '/libras.mp4',
                     title : "Libras",
                     default : false
                 },
@@ -132,7 +132,7 @@ var options = {
             subtitles : [
                 { 
                     type : "libras",
-                    url : 'videos/' + index + '/libras.webm',
+                    url : 'videos/' + index + '/libras.mp4',
                     title : "Libras",
                     default : false
                 },
@@ -163,7 +163,7 @@ var options = {
             subtitles : [
                 { 
                     type : "libras",
-                    url : 'videos/' + index + '/libras.webm',
+                    url : 'videos/' + index + '/libras.mp4',
                     title : "Libras",
                     default : false
                 },
@@ -194,7 +194,7 @@ var options = {
             subtitles : [
                 { 
                     type : "libras",
-                    url : 'videos/' + index + '/libras.webm',
+                    url : 'videos/' + index + '/libras.mp4',
                     title : "Libras",
                     default : false
                 },
@@ -225,7 +225,7 @@ var options = {
             subtitles : [
                 { 
                     type : "libras",
-                    url : 'videos/' + index + '/libras.webm',
+                    url : 'videos/' + index + '/libras.mp4',
                     title : "Libras",
                     default : false
                 },
@@ -256,7 +256,7 @@ var options = {
             subtitles : [
                 { 
                     type : "libras",
-                    url : 'videos/' + index + '/libras.webm',
+                    url : 'videos/' + index + '/libras.mp4',
                     title : "Libras",
                     default : false
                 },
@@ -287,7 +287,7 @@ var options = {
             subtitles : [
                 { 
                     type : "libras",
-                    url : 'videos/' + index + '/libras.webm',
+                    url : 'videos/' + index + '/libras.mp4',
                     title : "Libras",
                     default : false
                 },
@@ -318,7 +318,7 @@ var options = {
             subtitles : [
                 { 
                     type : "libras",
-                    url : 'videos/' + index + '/libras.webm',
+                    url : 'videos/' + index + '/libras.mp4',
                     title : "Libras",
                     default : false
                 },
@@ -349,7 +349,7 @@ var options = {
             subtitles : [
                 { 
                     type : "libras",
-                    url : 'videos/' + index + '/libras.webm',
+                    url : 'videos/' + index + '/libras.mp4',
                     title : "Libras",
                     default : false
                 },
@@ -380,7 +380,7 @@ var options = {
             subtitles : [
                 { 
                     type : "libras",
-                    url : 'videos/' + index + '/libras.webm',
+                    url : 'videos/' + index + '/libras.mp4',
                     title : "Libras",
                     default : false
                 },
@@ -411,7 +411,7 @@ var options = {
             subtitles : [
                 { 
                     type : "libras",
-                    url : 'videos/' + index + '/libras.webm',
+                    url : 'videos/' + index + '/libras.mp4',
                     title : "Libras",
                     default : false
                 },
@@ -442,7 +442,7 @@ var options = {
             subtitles : [
                 // { 
                 //     type : "libras",
-                //     url : 'videos/' + index + '/libras.webm',
+                //     url : 'videos/' + index + '/libras.mp4',
                 //     title : "Libras",
                 //     default : false
                 // },
