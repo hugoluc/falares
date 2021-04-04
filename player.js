@@ -13,7 +13,7 @@ function simplePlayer(_videoUrl,_subs,_title,_parent) {
     this.container = document.createElement('div')
     this.container.className = "playerVideo"
     this.loaded = false
-    this.onloaded = function(){  console.log("video loaded") }
+    this.onloaded = function(){  }
     _parent.appendChild(this.container)
 
     this.videoContainer = document.createElement('div')
@@ -160,8 +160,7 @@ timeLineControl.prototype.createDOMelements = function (_parent,_controlContaine
     this.playBtn = document.createElement('div')
     this.playBtn.className = "play-pause"
     this.container.appendChild(this.playBtn)
-    this.playBtn.addEventListener('touchstart', e => {
-        console.log("00000");
+    this.playBtn.addEventListener('touchend', e => {
         this.togglePlay()
     })
 
