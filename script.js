@@ -27,7 +27,7 @@ var options = {
                 { 
                     type : "text",
                     url : 'videos/' + index + '/subs/pt.vtt' ,
-                    title : 'Portugês',
+                    title : 'Português',
                     default : true
                 }
             ]
@@ -58,7 +58,7 @@ var options = {
                 { 
                     type : "text",
                     url : 'videos/' + index + '/subs/pt.vtt' ,
-                    title : 'Portugês',
+                    title : 'Português',
                     default : true
                 }
             ]
@@ -89,7 +89,7 @@ var options = {
                 { 
                     type : "text",
                     url : 'videos/' + index + '/subs/pt.vtt' ,
-                    title : 'Portugês',
+                    title : 'Português',
                     default : true
                 }
             ]
@@ -120,7 +120,7 @@ var options = {
                 { 
                     type : "text",
                     url : 'videos/' + index + '/subs/pt.vtt' ,
-                    title : 'Portugês',
+                    title : 'Português',
                     default : true
                 }
             ]
@@ -151,7 +151,7 @@ var options = {
                 { 
                     type : "text",
                     url : 'videos/' + index + '/subs/pt.vtt' ,
-                    title : 'Portugês',
+                    title : 'Português',
                     default : true
                 }
             ]
@@ -182,7 +182,7 @@ var options = {
                 { 
                     type : "text",
                     url : 'videos/' + index + '/subs/pt.vtt' ,
-                    title : 'Portugês',
+                    title : 'Português',
                     default : true
                 }
             ]
@@ -213,7 +213,7 @@ var options = {
                 { 
                     type : "text",
                     url : 'videos/' + index + '/subs/pt.vtt' ,
-                    title : 'Portugês',
+                    title : 'Português',
                     default : true
                 }
             ]
@@ -244,7 +244,7 @@ var options = {
                 { 
                     type : "text",
                     url : 'videos/' + index + '/subs/pt.vtt' ,
-                    title : 'Portugês',
+                    title : 'Português',
                     default : true
                 }
             ]
@@ -275,7 +275,7 @@ var options = {
                 { 
                     type : "text",
                     url : 'videos/' + index + '/subs/pt.vtt' ,
-                    title : 'Portugês',
+                    title : 'Português',
                     default : true
                 }
             ]
@@ -306,7 +306,7 @@ var options = {
                 { 
                     type : "text",
                     url : 'videos/' + index + '/subs/pt.vtt' ,
-                    title : 'Portugês',
+                    title : 'Português',
                     default : true
                 }
             ]
@@ -337,7 +337,7 @@ var options = {
                 { 
                     type : "text",
                     url : 'videos/' + index + '/subs/pt.vtt' ,
-                    title : 'Portugês',
+                    title : 'Português',
                     default : true
                 }
             ]
@@ -368,7 +368,7 @@ var options = {
                 { 
                     type : "text",
                     url : 'videos/' + index + '/subs/pt.vtt' ,
-                    title : 'Portugês',
+                    title : 'Português',
                     default : true
                 }
             ]
@@ -399,7 +399,7 @@ var options = {
                 { 
                     type : "text",
                     url : 'videos/' + index + '/subs/pt.vtt' ,
-                    title : 'Portugês',
+                    title : 'Português',
                     default : true
                 }
             ]
@@ -430,7 +430,7 @@ var options = {
                 { 
                     type : "text",
                     url : 'videos/' + index + '/subs/pt.vtt' ,
-                    title : 'Portugês',
+                    title : 'Português',
                     default : true
                 }
             ]
@@ -461,7 +461,7 @@ var options = {
                 { 
                     type : "text",
                     url : 'videos/' + index + '/subs/pt.vtt' ,
-                    title : 'Portugês',
+                    title : 'Português',
                     default : true
                 }
             ]
