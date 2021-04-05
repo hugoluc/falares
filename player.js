@@ -5,6 +5,8 @@
 
 function simplePlayer(_videoUrl,_subs,_title,_parent) { 
 
+    console.log(_videoUrl,_subs,_title);
+
     this.isVisible = true
     this.videoEnded = function(){}
     this.loadedVideosUrl = []
@@ -624,6 +626,8 @@ subtitle.prototype.makeActive = function(_isActve){
 }
 
 subtitle.prototype.cueEnter = function(_text){
+
+    console.log(_text);
 
     this.subContainer.innerHTML = _text.replace(/(\r\n|\n|\r)/gm, "<br />");
 
