@@ -390,6 +390,12 @@ subtilteControl.prototype.createDOMelements = function (_controlParent,_video,_s
         this.controlBg.style.height = this.openMenuHeight
     }
     
+    this.subsTitle = document.createElement("div")
+    this.subsTitle.className="subsTitle"
+    this.subsTitle.innerHTML = "Legendas ou Libras"
+    this.controlBg.appendChild(this.subsTitle)
+
+
     //-------------------
     //    subtitles
     //-------------------

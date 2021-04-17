@@ -28,9 +28,15 @@ subtitles : [
         type : "text",
         url : 'videos/0/subs/pt.vtt' ,
         title : 'Português',
+        default : false
+    },
+    { 
+        type : "text",
+        url : '' ,
+        title : 'Desativado',
         default : true
     }
-]
+    ]
         },
         {
             videoUrl : "videos/1/1.mp4",
@@ -59,9 +65,15 @@ subtitles : [
         type : "text",
         url : 'videos/1/subs/pt.vtt' ,
         title : 'Português',
+        default : false
+    },
+    { 
+        type : "text",
+        url : '' ,
+        title : 'Desativado',
         default : true
     }
-]
+    ]
         },        
         {
             videoUrl : "videos/2/2.mp4",
@@ -90,9 +102,15 @@ subtitles : [
         type : "text",
         url : 'videos/2/subs/pt.vtt' ,
         title : 'Português',
+        default : false
+    },
+    { 
+        type : "text",
+        url : '' ,
+        title : 'Desativado',
         default : true
     }
-]
+    ]
         },  
         {
             videoUrl : "videos/3/3.mp4",
@@ -121,9 +139,15 @@ subtitles : [
         type : "text",
         url : 'videos/3/subs/pt.vtt' ,
         title : 'Português',
+        default : false
+    },
+    { 
+        type : "text",
+        url : '' ,
+        title : 'Desativado',
         default : true
     }
-]
+    ]
         },        
         {
             videoUrl : "videos/4/4.mp4",
@@ -152,9 +176,15 @@ subtitles : [
         type : "text",
         url : 'videos/4/subs/pt.vtt' ,
         title : 'Português',
+        default : false
+    },
+    { 
+        type : "text",
+        url : '' ,
+        title : 'Desativado',
         default : true
     }
-]
+    ]
         },        
         {
             videoUrl : "videos/5/5.mp4",
@@ -183,9 +213,15 @@ subtitles : [
         type : "text",
         url : 'videos/5/subs/pt.vtt' ,
         title : 'Português',
+        default : false
+    },
+    { 
+        type : "text",
+        url : '' ,
+        title : 'Desativado',
         default : true
     }
-]
+    ]
         },
         {
             videoUrl : "videos/6/6.mp4",
@@ -214,9 +250,15 @@ subtitles : [
         type : "text",
         url : 'videos/6/subs/pt.vtt' ,
         title : 'Português',
+        default : false
+    },
+    { 
+        type : "text",
+        url : '' ,
+        title : 'Desativado',
         default : true
     }
-]
+    ]
         },
         {
             videoUrl : "videos/7/7.mp4",
@@ -245,9 +287,15 @@ subtitles : [
         type : "text",
         url : 'videos/7/subs/pt.vtt' ,
         title : 'Português',
+        default : false
+    },
+    { 
+        type : "text",
+        url : '' ,
+        title : 'Desativado',
         default : true
     }
-]
+    ]
         },
         {
             videoUrl : "videos/8/8.mp4",
@@ -276,9 +324,15 @@ subtitles : [
         type : "text",
         url : 'videos/8/subs/pt.vtt' ,
         title : 'Português',
+        default : false
+    },
+    { 
+        type : "text",
+        url : '' ,
+        title : 'Desativado',
         default : true
     }
-]
+    ]
         },
         {
             videoUrl : "videos/9/9.mp4",
@@ -307,9 +361,15 @@ subtitles : [
         type : "text",
         url : 'videos/9/subs/pt.vtt' ,
         title : 'Português',
+        default : false
+    },
+    { 
+        type : "text",
+        url : '' ,
+        title : 'Desativado',
         default : true
     }
-]
+    ]
         },
         {
             videoUrl : "videos/10/10.mp4",
@@ -338,9 +398,15 @@ subtitles : [
         type : "text",
         url : 'videos/10/subs/pt.vtt' ,
         title : 'Português',
+        default : false
+    },
+    { 
+        type : "text",
+        url : '' ,
+        title : 'Desativado',
         default : true
     }
-]
+    ]
         },
         {
             videoUrl : "videos/11/11.mp4",
@@ -369,9 +435,15 @@ subtitles : [
         type : "text",
         url : 'videos/11/subs/pt.vtt' ,
         title : 'Português',
+        default : false
+    },
+    { 
+        type : "text",
+        url : '' ,
+        title : 'Desativado',
         default : true
     }
-]
+    ]
         },
         {
             videoUrl : "videos/12/12.mp4",
@@ -400,9 +472,15 @@ subtitles : [
         type : "text",
         url : 'videos/12/subs/pt.vtt' ,
         title : 'Português',
+        default : false
+    },
+    { 
+        type : "text",
+        url : '' ,
+        title : 'Desativado',
         default : true
     }
-]
+    ]
         },
         {
             videoUrl : "videos/13/13.mp4",
