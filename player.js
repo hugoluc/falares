@@ -51,28 +51,28 @@ simplePlayer.prototype.creteVideoElement = function(){
     this.videoContainer.appendChild(this.video)
     this.video.addEventListener('loadedmetadata', () => { 
 
-        this.load()
         if(!this.loaded){
             this.loaded = true
             this.video.load()
         }else{
             this.video.isReady = true
         }
-
+        
     });
-
+    
     this.video.addEventListener('canplaythrough', (_e) => {  
         
         for (let index = 0; index < this.loadedVideosUrl.length; index++) {
-
+            
             if ( _e.target.currentSrc == this.loadedVideosUrl[index]){
                 return
             }
-
+            
         }
-
+        
         this.loadedVideosUrl.push(_e.target.currentSrc)
         this.onloaded(_e) 
+        this.load()
         this.onlaoded = {}
 
     });
