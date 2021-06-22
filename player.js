@@ -716,7 +716,7 @@ for (let i = 0; i < 1; i++) {
         { 
             type : "libras",
             url : 'libras.mp4' ,
-            title : "Libras",
+            title : "LIBRAS",
             default : false
         },
         { 
