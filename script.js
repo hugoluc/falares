@@ -5,482 +5,482 @@ var options = {
             videoUrl : "videos/0/0.mp4",
             title : "a lingua do tempo 1",
             swearWords : false,
-subtitles : [
-    { 
-        type : "libras",
-        url : 'videos/0/libras.mp4', 
-        title : "LIBRAS",
-        default : false
-    },
-    { 
-        type : "text",
-        url : 'videos/0/subs/en.vtt' ,
-        title : "English",
-        default : false
-    },
-    { 
-        type : "text",
-        url : 'videos/0/subs/es.vtt' ,
-        title : "Español",
-        default : false
-    },
-    { 
-        type : "text",
-        url : 'videos/0/subs/pt.vtt' ,
-        title : 'Português',
-        default : false
-    },
-    { 
-        type : "text",
-        url : '' ,
-        title : 'Desativado',
-        default : true
-    }
-    ]
+            subtitles : [
+                { 
+                    type : "libras",
+                    url : 'videos/0/libras.mp4', 
+                    title : "LIBRAS",
+                    default : false
+                },
+                { 
+                    type : "text",
+                    url : 'videos/0/subs/en.vtt' ,
+                    title : "English",
+                    default : false
+                },
+                { 
+                    type : "text",
+                    url : 'videos/0/subs/es.vtt' ,
+                    title : "Español",
+                    default : false
+                },
+                { 
+                    type : "text",
+                    url : 'videos/0/subs/pt.vtt' ,
+                    title : 'Português',
+                    default : false
+                },
+                { 
+                    type : "text",
+                    url : 'videos/0/subs/des.vtt'  ,
+                    title : 'Desativado',
+                    default : true
+                }
+                ]
         },
         {
             videoUrl : "videos/1/1.mp4",
             title : "a lingua do tempo 2",
             swearWords : false,
-subtitles : [
-    { 
-        type : "libras",
-        url : 'videos/1/libras.mp4', 
-        title : "LIBRAS",
-        default : false
-    },
-    { 
-        type : "text",
-        url : 'videos/1/subs/en.vtt' ,
-        title : "English",
-        default : false
-    },
-    { 
-        type : "text",
-        url : 'videos/1/subs/es.vtt' ,
-        title : "Español",
-        default : false
-    },
-    { 
-        type : "text",
-        url : 'videos/1/subs/pt.vtt' ,
-        title : 'Português',
-        default : false
-    },
-    { 
-        type : "text",
-        url : '' ,
-        title : 'Desativado',
-        default : true
-    }
-    ]
+            subtitles : [
+                { 
+                    type : "libras",
+                    url : 'videos/1/libras.mp4', 
+                    title : "LIBRAS",
+                    default : false
+                },
+                { 
+                    type : "text",
+                    url : 'videos/1/subs/en.vtt' ,
+                    title : "English",
+                    default : false
+                },
+                { 
+                    type : "text",
+                    url : 'videos/1/subs/es.vtt' ,
+                    title : "Español",
+                    default : false
+                },
+                { 
+                    type : "text",
+                    url : 'videos/1/subs/pt.vtt' ,
+                    title : 'Português',
+                    default : false
+                },
+                { 
+                    type : "text",
+                    url : 'videos/1/subs/des.vtt' ,
+                    title : 'Desativado',
+                    default : true
+                }
+                ]
         },        
         {
             videoUrl : "videos/2/2.mp4",
             title : "variações do falar 1",
             swearWords : false,
-subtitles : [
-    { 
-        type : "libras",
-        url : 'videos/2/libras.mp4', 
-        title : "LIBRAS",
-        default : false
-    },
-    { 
-        type : "text",
-        url : 'videos/2/subs/en.vtt' ,
-        title : "English",
-        default : false
-    },
-    { 
-        type : "text",
-        url : 'videos/2/subs/es.vtt' ,
-        title : "Español",
-        default : false
-    },
-    { 
-        type : "text",
-        url : 'videos/2/subs/pt.vtt' ,
-        title : 'Português',
-        default : false
-    },
-    { 
-        type : "text",
-        url : '' ,
-        title : 'Desativado',
-        default : true
-    }
-    ]
+            subtitles : [
+                { 
+                    type : "libras",
+                    url : 'videos/2/libras.mp4', 
+                    title : "LIBRAS",
+                    default : false
+                },
+                { 
+                    type : "text",
+                    url : 'videos/2/subs/en.vtt' ,
+                    title : "English",
+                    default : false
+                },
+                { 
+                    type : "text",
+                    url : 'videos/2/subs/es.vtt' ,
+                    title : "Español",
+                    default : false
+                },
+                { 
+                    type : "text",
+                    url : 'videos/2/subs/pt.vtt' ,
+                    title : 'Português',
+                    default : false
+                },
+                { 
+                    type : "text",
+                    url : 'videos/2/subs/des.vtt' ,
+                    title : 'Desativado',
+                    default : true
+                }
+                ]
         },  
         {
             videoUrl : "videos/3/3.mp4",
             title : "variações do falar 2",
             swearWords : false,
-subtitles : [
-    { 
-        type : "libras",
-        url : 'videos/3/libras.mp4', 
-        title : "LIBRAS",
-        default : false
-    },
-    { 
-        type : "text",
-        url : 'videos/3/subs/en.vtt' ,
-        title : "English",
-        default : false
-    },
-    { 
-        type : "text",
-        url : 'videos/3/subs/es.vtt' ,
-        title : "Español",
-        default : false
-    },
-    { 
-        type : "text",
-        url : 'videos/3/subs/pt.vtt' ,
-        title : 'Português',
-        default : false
-    },
-    { 
-        type : "text",
-        url : '' ,
-        title : 'Desativado',
-        default : true
-    }
-    ]
+            subtitles : [
+                { 
+                    type : "libras",
+                    url : 'videos/3/libras.mp4', 
+                    title : "LIBRAS",
+                    default : false
+                },
+                { 
+                    type : "text",
+                    url : 'videos/3/subs/en.vtt' ,
+                    title : "English",
+                    default : false
+                },
+                { 
+                    type : "text",
+                    url : 'videos/3/subs/es.vtt' ,
+                    title : "Español",
+                    default : false
+                },
+                { 
+                    type : "text",
+                    url : 'videos/3/subs/pt.vtt' ,
+                    title : 'Português',
+                    default : false
+                },
+                { 
+                    type : "text",
+                    url : 'videos/3/subs/des.vtt' ,
+                    title : 'Desativado',
+                    default : true
+                }
+                ]
         },        
         {
             videoUrl : "videos/4/4.mp4",
             title : "certo ou errado 1",
             swearWords : false,
-subtitles : [
-    { 
-        type : "libras",
-        url : 'videos/4/libras.mp4', 
-        title : "LIBRAS",
-        default : false
-    },
-    { 
-        type : "text",
-        url : 'videos/4/subs/en.vtt' ,
-        title : "English",
-        default : false
-    },
-    { 
-        type : "text",
-        url : 'videos/4/subs/es.vtt' ,
-        title : "Español",
-        default : false
-    },
-    { 
-        type : "text",
-        url : 'videos/4/subs/pt.vtt' ,
-        title : 'Português',
-        default : false
-    },
-    { 
-        type : "text",
-        url : '' ,
-        title : 'Desativado',
-        default : true
-    }
-    ]
+            subtitles : [
+                { 
+                    type : "libras",
+                    url : 'videos/4/libras.mp4', 
+                    title : "LIBRAS",
+                    default : false
+                },
+                { 
+                    type : "text",
+                    url : 'videos/4/subs/en.vtt' ,
+                    title : "English",
+                    default : false
+                },
+                { 
+                    type : "text",
+                    url : 'videos/4/subs/es.vtt' ,
+                    title : "Español",
+                    default : false
+                },
+                { 
+                    type : "text",
+                    url : 'videos/4/subs/pt.vtt' ,
+                    title : 'Português',
+                    default : false
+                },
+                { 
+                    type : "text",
+                    url : 'videos/4/subs/des.vtt' ,
+                    title : 'Desativado',
+                    default : true
+                }
+                ]
         },        
         {
             videoUrl : "videos/5/5.mp4",
             title : "certo ou errado 2",
             swearWords : false,
-subtitles : [
-    { 
-        type : "libras",
-        url : 'videos/5/libras.mp4', 
-        title : "LIBRAS",
-        default : false
-    },
-    { 
-        type : "text",
-        url : 'videos/5/subs/en.vtt' ,
-        title : "English",
-        default : false
-    },
-    { 
-        type : "text",
-        url : 'videos/5/subs/es.vtt' ,
-        title : "Español",
-        default : false
-    },
-    { 
-        type : "text",
-        url : 'videos/5/subs/pt.vtt' ,
-        title : 'Português',
-        default : false
-    },
-    { 
-        type : "text",
-        url : '' ,
-        title : 'Desativado',
-        default : true
-    }
-    ]
+            subtitles : [
+                { 
+                    type : "libras",
+                    url : 'videos/5/libras.mp4', 
+                    title : "LIBRAS",
+                    default : false
+                },
+                { 
+                    type : "text",
+                    url : 'videos/5/subs/en.vtt' ,
+                    title : "English",
+                    default : false
+                },
+                { 
+                    type : "text",
+                    url : 'videos/5/subs/es.vtt' ,
+                    title : "Español",
+                    default : false
+                },
+                { 
+                    type : "text",
+                    url : 'videos/5/subs/pt.vtt' ,
+                    title : 'Português',
+                    default : false
+                },
+                { 
+                    type : "text",
+                    url : 'videos/5/subs/des.vtt' ,
+                    title : 'Desativado',
+                    default : true
+                }
+                ]
         },
         {
             videoUrl : "videos/6/6.mp4",
             title : "língua e opressão 1",
             swearWords : false,
-subtitles : [
-    { 
-        type : "libras",
-        url : 'videos/6/libras.mp4', 
-        title : "LIBRAS",
-        default : false
-    },
-    { 
-        type : "text",
-        url : 'videos/6/subs/en.vtt' ,
-        title : "English",
-        default : false
-    },
-    { 
-        type : "text",
-        url : 'videos/6/subs/es.vtt' ,
-        title : "Español",
-        default : false
-    },
-    { 
-        type : "text",
-        url : 'videos/6/subs/pt.vtt' ,
-        title : 'Português',
-        default : false
-    },
-    { 
-        type : "text",
-        url : '' ,
-        title : 'Desativado',
-        default : true
-    }
-    ]
+            subtitles : [
+                { 
+                    type : "libras",
+                    url : 'videos/6/libras.mp4', 
+                    title : "LIBRAS",
+                    default : false
+                },
+                { 
+                    type : "text",
+                    url : 'videos/6/subs/en.vtt' ,
+                    title : "English",
+                    default : false
+                },
+                { 
+                    type : "text",
+                    url : 'videos/6/subs/es.vtt' ,
+                    title : "Español",
+                    default : false
+                },
+                { 
+                    type : "text",
+                    url : 'videos/6/subs/pt.vtt' ,
+                    title : 'Português',
+                    default : false
+                },
+                { 
+                    type : "text",
+                    url : 'videos/6/subs/des.vtt' ,
+                    title : 'Desativado',
+                    default : true
+                }
+                ]
         },
         {
             videoUrl : "videos/7/7.mp4",
             title : "língua e opressão 2",
             swearWords : false,
-subtitles : [
-    { 
-        type : "libras",
-        url : 'videos/7/libras.mp4', 
-        title : "LIBRAS",
-        default : false
-    },
-    { 
-        type : "text",
-        url : 'videos/7/subs/en.vtt' ,
-        title : "English",
-        default : false
-    },
-    { 
-        type : "text",
-        url : 'videos/7/subs/es.vtt' ,
-        title : "Español",
-        default : false
-    },
-    { 
-        type : "text",
-        url : 'videos/7/subs/pt.vtt' ,
-        title : 'Português',
-        default : false
-    },
-    { 
-        type : "text",
-        url : '' ,
-        title : 'Desativado',
-        default : true
-    }
-    ]
+            subtitles : [
+                { 
+                    type : "libras",
+                    url : 'videos/7/libras.mp4', 
+                    title : "LIBRAS",
+                    default : false
+                },
+                { 
+                    type : "text",
+                    url : 'videos/7/subs/en.vtt' ,
+                    title : "English",
+                    default : false
+                },
+                { 
+                    type : "text",
+                    url : 'videos/7/subs/es.vtt' ,
+                    title : "Español",
+                    default : false
+                },
+                { 
+                    type : "text",
+                    url : 'videos/7/subs/pt.vtt' ,
+                    title : 'Português',
+                    default : false
+                },
+                { 
+                    type : "text",
+                    url : 'videos/7/subs/des.vtt' ,
+                    title : 'Desativado',
+                    default : true
+                }
+                ]
         },
         {
             videoUrl : "videos/8/8.mp4",
             title : "língua e opressão 3",
             swearWords : false,
-subtitles : [
-    { 
-        type : "libras",
-        url : 'videos/8/libras.mp4', 
-        title : "LIBRAS",
-        default : false
-    },
-    { 
-        type : "text",
-        url : 'videos/8/subs/en.vtt' ,
-        title : "English",
-        default : false
-    },
-    { 
-        type : "text",
-        url : 'videos/8/subs/es.vtt' ,
-        title : "Español",
-        default : false
-    },
-    { 
-        type : "text",
-        url : 'videos/8/subs/pt.vtt' ,
-        title : 'Português',
-        default : false
-    },
-    { 
-        type : "text",
-        url : '' ,
-        title : 'Desativado',
-        default : true
-    }
-    ]
+            subtitles : [
+                { 
+                    type : "libras",
+                    url : 'videos/8/libras.mp4', 
+                    title : "LIBRAS",
+                    default : false
+                },
+                { 
+                    type : "text",
+                    url : 'videos/8/subs/en.vtt' ,
+                    title : "English",
+                    default : false
+                },
+                { 
+                    type : "text",
+                    url : 'videos/8/subs/es.vtt' ,
+                    title : "Español",
+                    default : false
+                },
+                { 
+                    type : "text",
+                    url : 'videos/8/subs/pt.vtt' ,
+                    title : 'Português',
+                    default : false
+                },
+                { 
+                    type : "text",
+                    url : 'videos/8/subs/des.vtt' ,
+                    title : 'Desativado',
+                    default : true
+                }
+                ]
         },
         {
             videoUrl : "videos/9/9.mp4",
             title : "palavrões e dialetos 1",
             swearWords : true,
-subtitles : [
-    { 
-        type : "libras",
-        url : 'videos/9/libras.mp4', 
-        title : "LIBRAS",
-        default : false
-    },
-    { 
-        type : "text",
-        url : 'videos/9/subs/en.vtt' ,
-        title : "English",
-        default : false
-    },
-    { 
-        type : "text",
-        url : 'videos/9/subs/es.vtt' ,
-        title : "Español",
-        default : false
-    },
-    { 
-        type : "text",
-        url : 'videos/9/subs/pt.vtt' ,
-        title : 'Português',
-        default : false
-    },
-    { 
-        type : "text",
-        url : '' ,
-        title : 'Desativado',
-        default : true
-    }
-    ]
+            subtitles : [
+                { 
+                    type : "libras",
+                    url : 'videos/9/libras.mp4', 
+                    title : "LIBRAS",
+                    default : false
+                },
+                { 
+                    type : "text",
+                    url : 'videos/9/subs/en.vtt' ,
+                    title : "English",
+                    default : false
+                },
+                { 
+                    type : "text",
+                    url : 'videos/9/subs/es.vtt' ,
+                    title : "Español",
+                    default : false
+                },
+                { 
+                    type : "text",
+                    url : 'videos/9/subs/pt.vtt' ,
+                    title : 'Português',
+                    default : false
+                },
+                { 
+                    type : "text",
+                    url : 'videos/9/subs/des.vtt' ,
+                    title : 'Desativado',
+                    default : true
+                }
+                ]
         },
         {
             videoUrl : "videos/10/10.mp4",
             title : "palavrões e dialetos 2",
             swearWords : true,
-subtitles : [
-    { 
-        type : "libras",
-        url : 'videos/10/libras.mp4', 
-        title : "LIBRAS",
-        default : false
-    },
-    { 
-        type : "text",
-        url : 'videos/10/subs/en.vtt' ,
-        title : "English",
-        default : false
-    },
-    { 
-        type : "text",
-        url : 'videos/10/subs/es.vtt' ,
-        title : "Español",
-        default : false
-    },
-    { 
-        type : "text",
-        url : 'videos/10/subs/pt.vtt' ,
-        title : 'Português',
-        default : false
-    },
-    { 
-        type : "text",
-        url : '' ,
-        title : 'Desativado',
-        default : true
-    }
-    ]
+            subtitles : [
+                { 
+                    type : "libras",
+                    url : 'videos/10/libras.mp4', 
+                    title : "LIBRAS",
+                    default : false
+                },
+                { 
+                    type : "text",
+                    url : 'videos/10/subs/en.vtt' ,
+                    title : "English",
+                    default : false
+                },
+                { 
+                    type : "text",
+                    url : 'videos/10/subs/es.vtt' ,
+                    title : "Español",
+                    default : false
+                },
+                { 
+                    type : "text",
+                    url : 'videos/10/subs/pt.vtt' ,
+                    title : 'Português',
+                    default : false
+                },
+                { 
+                    type : "text",
+                    url : 'videos/10/subs/des.vtt' ,
+                    title : 'Desativado',
+                    default : true
+                }
+                ]
         },
         {
             videoUrl : "videos/11/11.mp4",
             title : "palavrões e dialetos 3",
             swearWords : true,
-subtitles : [
-    { 
-        type : "libras",
-        url : 'videos/11/libras.mp4', 
-        title : "LIBRAS",
-        default : false
-    },
-    { 
-        type : "text",
-        url : 'videos/11/subs/en.vtt' ,
-        title : "English",
-        default : false
-    },
-    { 
-        type : "text",
-        url : 'videos/11/subs/es.vtt' ,
-        title : "Español",
-        default : false
-    },
-    { 
-        type : "text",
-        url : 'videos/11/subs/pt.vtt' ,
-        title : 'Português',
-        default : false
-    },
-    { 
-        type : "text",
-        url : '' ,
-        title : 'Desativado',
-        default : true
-    }
-    ]
+            subtitles : [
+                { 
+                    type : "libras",
+                    url : 'videos/11/libras.mp4', 
+                    title : "LIBRAS",
+                    default : false
+                },
+                { 
+                    type : "text",
+                    url : 'videos/11/subs/en.vtt' ,
+                    title : "English",
+                    default : false
+                },
+                { 
+                    type : "text",
+                    url : 'videos/11/subs/es.vtt' ,
+                    title : "Español",
+                    default : false
+                },
+                { 
+                    type : "text",
+                    url : 'videos/11/subs/pt.vtt' ,
+                    title : 'Português',
+                    default : false
+                },
+                { 
+                    type : "text",
+                    url : 'videos/11/subs/des.vtt' ,
+                    title : 'Desativado',
+                    default : true
+                }
+                ]
         },
         {
             videoUrl : "videos/12/12.mp4",
             title : "acordos ortográficos",
             swearWords : false,
-subtitles : [
-    { 
-        type : "libras",
-        url : 'videos/12/libras.mp4', 
-        title : "LIBRAS",
-        default : false
-    },
-    { 
-        type : "text",
-        url : 'videos/12/subs/en.vtt' ,
-        title : "English",
-        default : false
-    },
-    { 
-        type : "text",
-        url : 'videos/12/subs/es.vtt' ,
-        title : "Español",
-        default : false
-    },
-    { 
-        type : "text",
-        url : 'videos/12/subs/pt.vtt' ,
-        title : 'Português',
-        default : false
-    },
-    { 
-        type : "text",
-        url : '' ,
-        title : 'Desativado',
-        default : true
-    }
-    ]
+            subtitles : [
+                { 
+                    type : "libras",
+                    url : 'videos/12/libras.mp4', 
+                    title : "LIBRAS",
+                    default : false
+                },
+                { 
+                    type : "text",
+                    url : 'videos/12/subs/en.vtt' ,
+                    title : "English",
+                    default : false
+                },
+                { 
+                    type : "text",
+                    url : 'videos/12/subs/es.vtt' ,
+                    title : "Español",
+                    default : false
+                },
+                { 
+                    type : "text",
+                    url : 'videos/12/subs/pt.vtt' ,
+                    title : 'Português',
+                    default : false
+                },
+                { 
+                    type : "text",
+                    url : 'videos/12/subs/des.vtt' ,
+                    title : 'Desativado',
+                    default : true
+                }
+                ]
         },
         {
             videoUrl : "videos/13/13.mp4",
@@ -510,6 +510,12 @@ subtitles : [
                     url : 'videos/13/subs/pt.vtt' ,
                     title : 'Português',
                     default : true
+                },
+                { 
+                    type : "text",
+                    url : 'videos/13/subs/des.vtt' ,
+                    title : 'Desativado',
+                    default : true
                 }
             ]
         },
@@ -518,12 +524,6 @@ subtitles : [
             title : "libras e português 2",
             swearWords : false,
             subtitles : [
-                // { 
-                //     type : "libras",
-                //     url : 'videos/' + index + '/libras.mp4',
-                //     title : "LIBRAS",
-                //     default : false
-                // },
                 { 
                     type : "text",
                     url : 'videos/14/subs/en.vtt' ,
@@ -540,6 +540,12 @@ subtitles : [
                     type : "text",
                     url : 'videos/14/subs/pt.vtt' ,
                     title : 'Português',
+                    default : true
+                },
+                { 
+                    type : "text",
+                    url : 'videos/14/subs/des.vtt' ,
+                    title : 'Desativado',
                     default : true
                 }
             ]
